@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.iconSocials {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+}
+.logoLinkedIn,
+.logoGitHub {
+  &:hover {
+    background: linear-gradient(43deg, #7068fa 0%, #ff64b4 46%, #ffd94a 100%);
+    border-radius: 50%;
+  }
+}
+
+// MODE MOBILE
+
+@media only screen and (max-width: 767px) {
+}
+
+// MODE TABLET
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+}

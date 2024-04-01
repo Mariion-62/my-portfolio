@@ -1,0 +1,117 @@
+.cardParcours {
+  width: 40vw;
+  height: 18rem;
+  padding: 1.5rem 0;
+  margin: 20px;
+  font-size: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  box-shadow: -1px -3px 8px 4px var(--color-violet);
+  &:hover {
+    box-shadow: -1px -3px 8px 4px var(--color-pink);
+    .dateParcours,
+    .job,
+    .enterprise {
+      opacity: 0;
+    }
+    .xpParcours,
+    .pictureParcours {
+      opacity: 1;
+      transition: 1s;
+    }
+  }
+}
+
+.dateParcours {
+  text-align: center;
+  font-size: 1.5em;
+  font-weight: bolder;
+}
+.job {
+  padding: 1vh;
+  height: 5vh;
+}
+.enterprise {
+  padding: 1vh;
+  font-style: italic;
+  height: 3vh;
+}
+.xpParcours {
+  display: flex;
+  flex-direction: column;
+  opacity: 0;
+  height: fit-content;
+  margin-top: -12rem;
+  .listParcours {
+    padding-bottom: 1rem;
+    list-style: none;
+  }
+}
+.pictureParcours {
+  opacity: 0;
+  width: 10vw;
+  height: 6vh;
+  align-items: center;
+  object-fit: contain;
+}
+
+// MODE MOBILE
+
+@media only screen and (max-width: 767px) {
+  .cardParcours {
+    width: 90vw;
+    max-height: 20rem;
+    border-radius: 20px;
+    box-shadow: -1px -3px 8px 4px var(--color-violet);
+    margin: 1vh 3.5vw 5vh 3.5vw;
+  }
+
+  .dateParcours {
+    width: 80vw;
+    margin: auto;
+  }
+  .job {
+    width: 80vw;
+    margin: auto;
+    font-size: 1em;
+  }
+  .enterprise {
+    padding: 1.5vh;
+    height: 3vh;
+    font-size: 1em;
+  }
+  .xpParcours {
+    margin: 1vh 0;
+    text-align: left;
+    padding: 0;
+    opacity: 1;
+  }
+  .pictureParcours {
+    width: 50vw;
+    height: 7vh;
+    padding-top: 5vh;
+    opacity: 1;
+  }
+}
+
+// MODE TABLET
+
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+  .cardParcours {
+    width: 45vw;
+    margin: 0vh 1vw 4vh 2.2vw;
+    border-radius: 20px;
+    box-shadow: -1px -3px 8px 4px var(--color-violet);
+  }
+
+  .dateParcours {
+    height: 6vh;
+  }
+
+  .pictureParcours {
+    width: 20vw;
+    height: 8vh;
+  }
+}
