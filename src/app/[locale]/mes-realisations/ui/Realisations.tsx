@@ -4,7 +4,7 @@ import {
   CardRealisation,
   CardRealisationProps,
   dataRealisation,
-} from "@/components/CardRealisation/CardRealisation";
+} from "@/src/components/CardRealisation/CardRealisation";
 
 export type DataRealisationType = CardRealisationProps;
 
