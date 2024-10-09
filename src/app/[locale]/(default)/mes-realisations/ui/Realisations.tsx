@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import styles from "./realisation.module.scss";
 import {
@@ -8,7 +10,7 @@ import {
 
 export type DataRealisationType = CardRealisationProps;
 
-export default function Realisations() {
+function Realisations() {
   const [cardRealisations, setCardRealisations] = useState<
     DataRealisationType[]
   >([]);
@@ -44,3 +46,5 @@ export default function Realisations() {
     </div>
   );
 }
+
+export { Realisations };

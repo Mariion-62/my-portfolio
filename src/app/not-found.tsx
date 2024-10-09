@@ -1,11 +1,14 @@
-"use client";
+import styles from "./not-found.module.scss";
 
 export default function NotFound() {
   return (
-    <html>
-      <body className="text-center">
-        <h1 className="mt-10 font-semibold">Something went wrong!</h1>
-      </body>
-    </html>
+    <div className={styles.page404}>
+      <div className={styles.title}>Oops... Cette page n&apos;existe pas</div>
+      <button className={styles.btnBack}>
+        <a className={styles.link} href="/">
+          Accueil
+        </a>
+      </button>
+    </div>
   );
 }

@@ -7,7 +7,7 @@ import {
 } from "@/src/components/CardParcours/CardParcours";
 import { useState, useEffect } from "react";
 import styles from "./parcours.module.scss";
-import { Description } from "@/src/components/Description/Description";
+import { useTranslations } from "next-intl";
 
 export type DataParcoursType = CardParcoursProps;
 
@@ -24,9 +24,10 @@ export default function Parcours() {
 
     setAllParcours(dataParcoursCopy);
   }, []);
+  const t = useTranslations();
   return (
     <>
-      <h2 className={styles.titleExpPro}>Expériences professionnelles</h2>
+      <h2 className={styles.titleExpPro}>{t("exp_careers.title_exp")}</h2>
       <div className={styles.parcours}>
         {allParcours.map((oneParcours, index) => {
           return (

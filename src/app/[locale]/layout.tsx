@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
 import "./globals.scss";
+
 import { Header } from "@/src/components/Header/Header";
 import { Footer } from "@/src/components/Footer/Footer";
-
-const inter = Inter({ subsets: ["latin"] });
+import { NextIntlClientProvider } from "next-intl";
+import frMessages from "../../../dictionnary/fr.json";
+import { ReactNode } from "react";
 
 export const metadata: Metadata = {
   title: "Mariion-dev",
@@ -14,14 +15,18 @@ export const metadata: Metadata = {
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
+  const locale = "fr"; // Utilisez la langue par défaut si locale n'est pas défini
+  const messages = frMessages;
   return (
-    <html lang="en">
+    <html lang={locale}>
       <body>
-        <Header />
-        <div>{children}</div>
-        <Footer />
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <Header />
+          {children}
+          <Footer />
+        </NextIntlClientProvider>
       </body>
     </html>
   );

@@ -1,7 +1,7 @@
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+import { PropsWithChildren } from "react";
+
+const RootLayout = ({ children }: PropsWithChildren) => {
   return children;
-}
+};
+
+export default RootLayout;

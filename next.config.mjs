@@ -6,3 +6,7 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig = {};
 
 export default withNextIntl(nextConfig);
+export const i18n = {
+    locales: ['en', 'fr'],
+    defaultLocale: 'en',
+};
