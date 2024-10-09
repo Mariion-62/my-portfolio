@@ -11,7 +11,7 @@ function Header() {
   return (
     <div className={styles.header}>
       <Link id="header" href="/">
-        <Image src={Logo} alt="Logo" width={130} height={130} />
+        <Image src={'/logo.png'} alt="Logo" width={130} height={130} />
       </Link>
       <div>
         <div className={styles.iconSocials}>
@@ -22,7 +22,7 @@ function Header() {
           >
             <Image
               className={styles.logoLinkedIn}
-              src={logoLinkedIn}
+              src={'/logoLinkedIn.png'}
               alt="LinkedIn"
               width={60}
               height={60}
@@ -30,7 +30,7 @@ function Header() {
           </a>
           <a href="https://github.com/Mariion-62">
             <Image
-              src={logoGitHub}
+              src={'/logoGitHub.png'}
               alt="Github"
               className={styles.logoGitHub}
               width={60}

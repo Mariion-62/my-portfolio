@@ -15,7 +15,7 @@ export interface CardRealisationProps {
   linkGithubBack?: string;
 }
 
-export function CardRealisation({
+function CardRealisation({
   id,
   title,
   picture,
@@ -158,3 +158,5 @@ export const dataRealisation = [
     problematique: "Créer une app web sous forme d’une one page",
   },
 ];
+
+export { CardRealisation };

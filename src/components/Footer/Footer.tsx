@@ -1,12 +1,16 @@
 import { IoMailOutline } from "react-icons/io5";
 import styles from "./footer.module.scss";
+import { useTranslations } from "next-intl";
 
 function Footer() {
   const currentYear = new Date().getFullYear();
+  const t = useTranslations();
   return (
     <div className={styles.footer}>
-      <p className={styles.legalsMentions}>mentions légales</p>
-      <p className={styles.copyright}>Copyright {currentYear} </p>
+      <p className={styles.legalsMentions}>{t("footer.legal_notice")}</p>
+      <p className={styles.copyright}>
+        {t("footer.copyright", { currentYear })}
+      </p>
 
       <a
         className={styles.contact}
