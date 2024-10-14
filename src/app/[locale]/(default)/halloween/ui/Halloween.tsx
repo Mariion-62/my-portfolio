@@ -3,13 +3,18 @@
 import React, { useState } from "react";
 import CardHalloween from "@/src/components/CardHalloween/CardHalloween";
 import { useTranslations } from "next-intl";
+import styles from "./halloween.module.scss";
+import { link } from "fs";
+import { title } from "process";
 
 export default function Halloween() {
   const t = useTranslations();
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isAnswerVisible, setIsAnswerVisible] = useState(false);
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % dataHalloween.length);
+    setIsAnswerVisible(false);
   };
 
   const handlePrevious = () => {
@@ -17,8 +22,12 @@ export default function Halloween() {
       (prevIndex) =>
         (prevIndex - 1 + dataHalloween.length) % dataHalloween.length
     );
+    setIsAnswerVisible(false);
   };
 
+  const handleAnswerClick = () => {
+    setIsAnswerVisible(!isAnswerVisible);
+  };
   const dataHalloween = [
     {
       title: t("halloween.title_music.title_one"),
@@ -42,8 +51,8 @@ export default function Halloween() {
     },
     {
       title: t("halloween.title_music.title_five"),
-      answer: t("halloween.music.dexter"),
-      linkMusic: "/assets/dexter.mp3",
+      answer: t("halloween.music.scooby_doo"),
+      linkMusic: "/assets/ScoobyDoo.mp3",
     },
     {
       title: t("halloween.title_music.title_six"),
@@ -72,9 +81,10 @@ export default function Halloween() {
     },
     {
       title: t("halloween.title_music.title_eleven"),
-      answer: t("halloween.music.saw"),
-      linkMusic: "/assets/saw.mp3",
+      answer: t("halloween.music.buffy"),
+      linkMusic: "/assets/BuffyContreLesVampires.mp3",
     },
+
     {
       title: t("halloween.title_music.title_twelve"),
       answer: t("halloween.music.scream"),
@@ -100,23 +110,59 @@ export default function Halloween() {
       answer: t("halloween.music.walking_dead"),
       linkMusic: "/assets/walking-dead.mp3",
     },
+    {
+      title: t("halloween.title_music.title_seventeen"),
+      answer: t("halloween.music.saw"),
+      linkMusic: "/assets/saw.mp3",
+    },
+    {
+      title: t("halloween.title_music.title_eighteen"),
+      answer: t("halloween.music.charmed"),
+      linkMusic: "/assets/Charmed.mp3",
+    },
+    {
+      title: t("halloween.title_music.title_nineteen"),
+      answer: t("halloween.music.dexter"),
+      linkMusic: "/assets/dexter.mp3",
+    },
+    {
+      title: t("halloween.title_music.title_twenty"),
+      answer: t("halloween.music.this_is_halloween"),
+      linkMusic: "/assets/ThisIsHalloween.mp3",
+    },
   ];
 
   return (
-    <>
-      <h1>{t("halloween.title_page")}</h1>
+    <div className={styles.halloween_page}>
       <div>
+        <h1 className={styles.title_page}>{t("halloween.title_page")}</h1>
+      </div>
+      <div className={styles.card}>
         <CardHalloween
           title={dataHalloween[currentIndex].title}
           answer={dataHalloween[currentIndex].answer}
           linkMusic={dataHalloween[currentIndex].linkMusic}
+          isAswerVisible={isAnswerVisible}
+          onAnswerClick={handleAnswerClick}
         />
-        <button onClick={handlePrevious} disabled={currentIndex === 0}>
-          {t("halloween.previous_button")}
-        </button>
-        <button onClick={handleNext}>{t("halloween.next_button")}</button>
+        <div className={styles.container_button}>
+          <button
+            className={styles.button_prev_next}
+            onClick={handlePrevious}
+            disabled={currentIndex === 0}
+          >
+            {t("halloween.previous_button")}
+          </button>
+          <button
+            className={styles.button_prev_next}
+            onClick={handleNext}
+            disabled={currentIndex === dataHalloween.length - 1}
+          >
+            {t("halloween.next_button")}
+          </button>
+        </div>
       </div>
-    </>
+    </div>
   );
 }
 export { Halloween };
