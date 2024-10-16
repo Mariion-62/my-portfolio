@@ -8,6 +8,7 @@ interface NavElements {
 }
 
 export const navElements: NavElements[] = [
+  { label: "navigation.home", link: Routes.HOME },
   {
     label: "navigation.careers",
     link: Routes.CAREERS,

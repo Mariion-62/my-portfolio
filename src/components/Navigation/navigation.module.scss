@@ -2,20 +2,32 @@
   display: flex;
   gap: 3rem;
   font-size: 1.3rem;
+  padding: 1rem;
   > div {
     position: relative;
     display: flex;
     align-items: center;
+    width: fit-content;
     a {
       text-decoration: none;
       color: white;
-
       &:hover {
-        color: #7068fa;
+        background: linear-gradient(
+          43deg,
+          #7068fa 0%,
+          #ff64b4 46%,
+          #ffd94a 100%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
       }
     }
     &.active a {
-      color: #7068fa;
+      background: linear-gradient(43deg, #7068fa 0%, #ff64b4 46%, #ffd94a 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }
