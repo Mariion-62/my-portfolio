@@ -1,18 +1,16 @@
 "use client";
 
-import Logo from "../../public/logo.png";
-import logoGitHub from "../../public/logoGitHub.png";
-import logoLinkedIn from "../../public/logoLinkedIn.png";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import { Navigation } from "../Navigation/Navigation";
+import ChangeLogoWithDate from "@/src/utils/ChangeLogoWithDate";
 
 function Header() {
   return (
     <div className={styles.header}>
       <Link id="header" href="/">
-        <Image src={'/logo.png'} alt="Logo" width={130} height={130} />
+        {ChangeLogoWithDate()}
       </Link>
       <Navigation/>
       <div>
@@ -24,7 +22,7 @@ function Header() {
           >
             <Image
               className={styles.logoLinkedIn}
-              src={'/logoLinkedIn.png'}
+              src={"/logoLinkedIn.png"}
               alt="LinkedIn"
               width={60}
               height={60}
@@ -32,7 +30,7 @@ function Header() {
           </a>
           <a href="https://github.com/Mariion-62">
             <Image
-              src={'/logoGitHub.png'}
+              src={"/logoGitHub.png"}
               alt="Github"
               className={styles.logoGitHub}
               width={60}
