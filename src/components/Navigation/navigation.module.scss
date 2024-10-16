@@ -1,0 +1,21 @@
+.navigation {
+  display: flex;
+  gap: 3rem;
+  font-size: 1.3rem;
+  > div {
+    position: relative;
+    display: flex;
+    align-items: center;
+    a {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: #7068fa;
+      }
+    }
+    &.active a {
+      color: #7068fa;
+    }
+  }
+}

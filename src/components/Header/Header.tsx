@@ -6,6 +6,7 @@ import logoLinkedIn from "../../public/logoLinkedIn.png";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.scss";
+import { Navigation } from "../Navigation/Navigation";
 
 function Header() {
   return (
@@ -13,6 +14,7 @@ function Header() {
       <Link id="header" href="/">
         <Image src={'/logo.png'} alt="Logo" width={130} height={130} />
       </Link>
+      <Navigation/>
       <div>
         <div className={styles.iconSocials}>
           <a
