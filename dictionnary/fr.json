@@ -3,7 +3,62 @@
     "title_exp": "Expériences professionnelles"
   },
   "footer": {
-    "legal_notice": "mentions légales",
-    "copyright": "Copyright {currentYear}"
+    "copyright": "Copyright {currentYear}",
+    "legal_notice": "mentions légales"
+  },
+  "halloween": {
+    "music": {
+      "adams_family": "La famille Addams",
+      "american_horror_story": "American Horror Story",
+      "coraline": "Coraline",
+      "corpse_bride": "Les noces funèbres",
+      "dexter": "Dexter",
+      "exorcist": "L'exorciste",
+      "ghostbusters": "SOS Fantômes",
+      "jaws": "Les dents de la mer",
+      "lion_king": "Le roi lion - Soyez prêtes",
+      "ratched": "Ratched",
+      "saw": "Saw",
+      "scream": "Scream",
+      "stranger_things": "Stranger Things",
+      "the_little_mermaid": "La petite sirène - Pauvres âmes en perdition",
+      "thriller": "Thriller - Michael Jackson",
+      "walking_dead": "The Walking Dead",
+      "buffy": "Buffy contre les vampires",
+      "charmed": "Charmed",
+      "scooby_doo": "Scooby-Doo",
+      "this_is_halloween": "This is Halloween - L'étrange Noël de Monsieur Jack"
+    },
+    "pause": "Pause",
+    "play": "Jouer",
+    "answer": "Réponse",
+    "next_button": "Suivant",
+    "previous_button": "Précédent",
+    "title_music": {
+      "title_eight": "Titre 8",
+      "title_eighteen": "Titre 18",
+      "title_eleven": "Titre 11",
+      "title_fifteen": "Titre 15",
+      "title_five": "Titre 5",
+      "title_four": "Titre 4",
+      "title_fourteen": "Titre 14",
+      "title_nine": "Titre 9",
+      "title_nineteen": "Titre 19",
+      "title_one": "Titre 1",
+      "title_seven": "Titre 7",
+      "title_seventeen": "Titre 17",
+      "title_six": "Titre 6",
+      "title_sixteen": "Titre 16",
+      "title_ten": "Titre 10",
+      "title_thirteen": "Titre 13",
+      "title_three": "Titre 3",
+      "title_twelve": "Titre 12",
+      "title_twenty": "Titre 20",
+      "title_twenty_one": "Titre 21",
+      "title_twenty_three": "Titre 23",
+      "title_twenty_two": "Titre 22",
+      "title_two": "Titre 2"
+    },
+    "title_page": "THIS IS HALLOWEEN"
   }
 }

@@ -1,0 +1,48 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
+.halloween_page {
+  display: flex;
+  flex-direction: column;
+  font-family: "Creepster", cursive;
+}
+.title_page {
+  display: flex;
+  color: #990000;
+  justify-content: center;
+  font-family: "Creepster", cursive;
+  font-size: 5rem;
+  margin-top: 0;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.container_button {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin: 3rem;
+}
+
+.button_prev_next {
+  border: none;
+  width: fit-content;
+  font-size: 2rem;
+  border-radius: 1rem;
+  background-color: #d4d925;
+  font-weight: 700;
+  font-family: "Creepster", cursive;
+  padding: 0.5rem;
+  cursor: pointer;
+  &:hover {
+    color: white;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    color: grey;
+    &:hover {
+      color: grey;
+    }
+  }
+}
