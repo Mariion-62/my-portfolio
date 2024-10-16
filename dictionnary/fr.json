@@ -1,4 +1,9 @@
 {
+  "navigation": {
+    "home": "Accueil",
+    "project": "Mes realisations",
+    "careers": "Mon parcours"
+  },
   "exp_careers": {
     "title_exp": "Expériences professionnelles"
   },

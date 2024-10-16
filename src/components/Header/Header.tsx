@@ -3,6 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.scss";
+import { Navigation } from "../Navigation/Navigation";
 import ChangeLogoWithDate from "@/src/utils/ChangeLogoWithDate";
 
 function Header() {
@@ -11,6 +12,7 @@ function Header() {
       <Link id="header" href="/">
         {ChangeLogoWithDate()}
       </Link>
+      <Navigation/>
       <div>
         <div className={styles.iconSocials}>
           <a
