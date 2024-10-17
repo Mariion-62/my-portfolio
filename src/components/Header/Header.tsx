@@ -5,6 +5,7 @@ import Image from "next/image";
 import styles from "./header.module.scss";
 import { Navigation } from "../Navigation/Navigation";
 import ChangeLogoWithDate from "@/src/utils/ChangeLogoWithDate";
+import { MenuBurger } from "../MenuBurger/MenuBurger";
 
 function Header() {
   return (
@@ -12,7 +13,7 @@ function Header() {
       <Link id="header" href="/">
         {ChangeLogoWithDate()}
       </Link>
-      <Navigation/>
+      {window.innerWidth <= 768 ? <MenuBurger /> : <Navigation />}
       <div>
         <div className={styles.iconSocials}>
           <a

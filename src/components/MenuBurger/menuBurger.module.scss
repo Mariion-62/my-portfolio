@@ -1,0 +1,54 @@
+.menuBurger {
+  position: relative;
+}
+
+.burgerButtonOpen {
+  background: none;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  color: white;
+}
+.displayNone {
+  display: none;
+}
+.burgerButtonClose {
+  position: absolute;
+  top: 1rem;
+  right: 2rem;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: white;
+  cursor: pointer;
+}
+
+.navMenu {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  padding: 1rem;
+  top: 0;
+  left: 0;
+  background-color: var(--color-violet);
+  border: none;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 2rem;
+  width: max-content;
+}
+
+.navItem {
+  height: 2rem;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 0;
+  border-bottom: 2px solid var(--color-yellow);
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}

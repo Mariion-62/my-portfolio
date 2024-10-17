@@ -13,11 +13,7 @@ const Navigation = () => {
           key={element.label}
           className={pathname === element.link ? styles.active : ""}
         >
-          {element.link && (
-            <Link className={styles.link} href={element.link}>
-              {t(element.label)}
-            </Link>
-          )}
+          {element.link && <Link href={element.link}>{t(element.label)}</Link>}
         </div>
       ))}
     </nav>
