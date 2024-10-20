@@ -4,18 +4,6 @@ export const dataParcours = [
   {
     id: 1,
     dateBegin: "2012",
-    dateEnd: "2015",
-    job: "Professeur d'Activités Physiques Adaptées et Santé",
-    experience:
-      "Mise en place d’un projet sportif en lien avec l’établissement spécialisé",
-    picture: "/Logo_CDSA59.png",
-    enterprise: "CD Sport Adapté Nord",
-    expTwo: "Mise en place de séances sportives individuelle et collective",
-    expThree: "Être à l’écoute des sportifs",
-  },
-  {
-    id: 2,
-    dateBegin: "2016",
     dateEnd: "2022",
     job: "Conseillère Technique Fédérale",
     experience: "Promouvoir le SA sur le territoire du Nord",
@@ -27,7 +15,7 @@ export const dataParcours = [
     expFive: "Relation avec les partenaires",
   },
   {
-    id: 3,
+    id: 2,
     dateBegin: "2021",
     dateEnd: "2022",
     job: "Formation Développeur Web et Web Appli",
@@ -39,7 +27,7 @@ export const dataParcours = [
     expFour: "Outils: Git, GitHub, Postman",
   },
   {
-    id: 4,
+    id: 3,
     dateBegin: "04/2022",
     dateEnd: "07/2022",
     job: "Développeuse Front-End - React",
@@ -51,7 +39,7 @@ export const dataParcours = [
       "Développement d'une onePage dynamique - Réalisation de tests unitaires",
   },
   {
-    id: 5,
+    id: 4,
     dateBegin: "11/2022",
     dateEnd: "09/2023",
     job: "Développeuse Back-End - Node.JS",
@@ -65,9 +53,9 @@ export const dataParcours = [
       "Outils: Git, GitLab, MongoCompass, Postman, Jest, Swagger/openAPI",
   },
   {
-    id: 6,
+    id: 5,
     dateBegin: "09/2023",
-    dateEnd: "Aujourd'hui",
+    dateEnd: "07/2024",
     job: "Développeuse Front-End - React/Next.js",
     experience:
       "Développement de features pour créer un portail - Réalisation de tests unitaires et tests d'intégration - Développement d'un lib de composants partagés",
@@ -76,6 +64,19 @@ export const dataParcours = [
     expTwo: "Front-end: React, Next.js, TypeScript",
     expThree:
       "Outils: Git, GitLab, Postman, Jest, Sonarqube, Jira, Swagger/openAPI",
+  },
+  {
+    id: 6,
+    dateBegin: "09/2024",
+    dateEnd: "Aujourd'hui",
+    job: "Développeuse Fullstack - Vue.js, Nest.js, TypeScript",
+    experience:
+      "Développement de features pour un outil de gestion immobilière - Ajout de routes dans une API en Nest.js - Réalisation de tests unitaires et tests d'intégration",
+    picture: "",
+    enterprise: "QuickDev",
+    expTwo: "Front-end: Vue.js - TypeScript",
+    expThree: "Back-end: Nest.js - TypeScript",
+    expFour: "Outils: Git, GitHub, Jest, Plane, Swagger/openAPI",
   },
 ];
 

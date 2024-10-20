@@ -62,10 +62,22 @@
 @media only screen and (max-width: 767px) {
   .cardParcours {
     width: 90vw;
-    max-height: 20rem;
+    height: max-content;
     border-radius: 20px;
     box-shadow: -1px -3px 8px 4px var(--color-violet);
     margin: 1vh 3.5vw 5vh 3.5vw;
+    &:hover {
+      .dateParcours,
+      .job,
+      .enterprise {
+        opacity: 1;
+      }
+      .xpParcours,
+      .pictureParcours {
+        opacity: 1;
+        transition: none;
+      }
+    }
   }
 
   .dateParcours {
@@ -76,6 +88,9 @@
     width: 80vw;
     margin: auto;
     font-size: 1em;
+    display: flex;
+    justify-content: center;
+    text-align: center;
   }
   .enterprise {
     padding: 1.5vh;
@@ -83,16 +98,13 @@
     font-size: 1em;
   }
   .xpParcours {
-    margin: 1vh 0;
+    margin: 1rem;
     text-align: left;
     padding: 0;
     opacity: 1;
   }
   .pictureParcours {
-    width: 50vw;
-    height: 7vh;
-    padding-top: 5vh;
-    opacity: 1;
+    display: none;
   }
 }
 
