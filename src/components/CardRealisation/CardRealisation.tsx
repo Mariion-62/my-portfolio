@@ -59,9 +59,11 @@ function CardRealisation({
             height={200}
           />
         </a>
-        <p className={styles.problematiqueProject}>
-          Problématique : {problematique}
-        </p>
+        {problematique && (
+          <p className={styles.problematiqueProject}>
+            Problématique : {problematique}
+          </p>
+        )}
         <p className={styles.contentProject}>{content}</p>
         <div className={styles.gitHub}>
           {linkGithub && (
@@ -72,7 +74,7 @@ function CardRealisation({
               rel="noreferrer"
             >
               <p className={styles.textGithub}>Front-End</p>
-              <IoLogoGithub className="ioLogoGithub" />
+              <IoLogoGithub className={styles.ioLogoGithub} />
             </a>
           )}
           {linkGithubBack && (
@@ -108,7 +110,6 @@ export const dataRealisation = [
   },
   {
     id: 2,
-
     title: "Wild Heroes",
     picture: "/wildHeroes.png",
     content:
@@ -156,6 +157,16 @@ export const dataRealisation = [
     group: "1",
     time: "4 mois",
     problematique: "Créer une app web sous forme d’une one page",
+  },
+  {
+    id: 6,
+    title: "This Is Halloween",
+    picture: "/thisIsHalloween.png",
+    content:
+      "Création d'un blind test sur le thème d'Halloween. L'utilisateur doit deviner le titre de la chanson et/ou l'artiste. Si la réponse est bonne, il gagne des points. Si la réponse est fausse, il perd des points. Le but est d'obtenir le meilleur score possible.",
+    linkSite: "https://marion-dev.fr/halloween",
+    group: "1",
+    time: "2 semaines",
   },
 ];
 
