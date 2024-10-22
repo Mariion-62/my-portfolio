@@ -1,7 +1,7 @@
-import React, { useState } from "react";
-import { navElements } from "@/types/menu";
-import { Link } from "@/src/navigation";
 import { useTranslations } from "next-intl";
+import React, { useState } from "react";
+import { Link } from "@/src/navigation";
+import { navElements } from "@/types/menu";
 import styles from "./menuBurger.module.scss";
 
 const MenuBurger = () => {

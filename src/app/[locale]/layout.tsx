@@ -1,11 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.scss";
 
-import { Header } from "@/src/components/Header/Header";
-import { Footer } from "@/src/components/Footer/Footer";
 import { NextIntlClientProvider } from "next-intl";
-import frMessages from "../../../dictionnary/fr.json";
 import { ReactNode } from "react";
+import { Footer } from "@/src/components/Footer/Footer";
+import { Header } from "@/src/components/Header/Header";
+import frMessages from "../../../dictionnary/fr.json";
 
 export const metadata: Metadata = {
   title: "Mariion-dev",

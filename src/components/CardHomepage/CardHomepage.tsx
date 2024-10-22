@@ -1,10 +1,10 @@
-import { Link } from "@/src/navigation";
-import bgPurple from "./bgPurple.png";
-import bgPink from "./bgPink.png";
-import styles from "./CardHomepage.module.scss";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
+import { Link } from "@/src/navigation";
+import styles from "./CardHomepage.module.scss";
 
 function CardHomepage() {
+  const t = useTranslations();
   return (
     <>
       <section className={styles.allCards}>
@@ -12,10 +12,15 @@ function CardHomepage() {
           <Link id="parcours" className={styles.link} href="/mon-parcours">
             <Image
               className={styles.imgCardHomepage}
-              src={bgPurple}
-              alt="Mon parcours"
+              src="/bgPurple.png"
+              alt={t("navigation.careers")}
+              width={400}
+              height={250}
+              priority
             />
-            <h2 className={styles.titleCardHomepage}> Mon parcours</h2>
+            <h2 className={styles.titleCardHomepage}>
+              {t("navigation.careers")}
+            </h2>
           </Link>
         </div>
         <div className={styles.card}>
@@ -26,10 +31,15 @@ function CardHomepage() {
           >
             <Image
               className={styles.imgCardHomepage}
-              src={bgPink}
-              alt="Mon parcours"
+              src="/bgPink.png"
+              alt={t("navigation.project")}
+              width={400}
+              height={250}
+              priority
             />
-            <h2 className={styles.titleCardHomepage}> Mes réalisations</h2>
+            <h2 className={styles.titleCardHomepage}>
+              {t("navigation.project")}
+            </h2>
           </Link>
         </div>
       </section>

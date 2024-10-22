@@ -1,5 +1,5 @@
-import { DictionaryKeys } from ".";
 import { Routes } from "./routes";
+import { DictionaryKeys } from ".";
 
 interface NavElements {
   label: DictionaryKeys;

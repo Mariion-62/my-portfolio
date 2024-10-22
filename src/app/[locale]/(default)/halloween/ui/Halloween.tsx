@@ -1,11 +1,9 @@
 "use client";
 
+import { useTranslations } from "next-intl";
 import React, { useState } from "react";
 import CardHalloween from "@/src/components/CardHalloween/CardHalloween";
-import { useTranslations } from "next-intl";
 import styles from "./halloween.module.scss";
-import { link } from "fs";
-import { title } from "process";
 
 export default function Halloween() {
   const t = useTranslations();
@@ -20,7 +18,7 @@ export default function Halloween() {
   const handlePrevious = () => {
     setCurrentIndex(
       (prevIndex) =>
-        (prevIndex - 1 + dataHalloween.length) % dataHalloween.length
+        (prevIndex - 1 + dataHalloween.length) % dataHalloween.length,
     );
     setIsAnswerVisible(false);
   };

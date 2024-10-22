@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 import { IoLogoGithub, IoPeopleSharp, IoTimeSharp } from "react-icons/io5";
 import styles from "./cardRealisation.module.scss";
 
@@ -27,9 +28,10 @@ function CardRealisation({
   problematique,
   linkGithubBack,
 }: CardRealisationProps) {
+  const t = useTranslations();
   return (
     <>
-      <div className={styles.allCard}>
+      <div key={id} className={styles.allCard}>
         <h2 className={styles.titleProject}>{title} </h2>
         <div className={styles.groupTime}>
           <div className={styles.groupProject}>
@@ -61,7 +63,7 @@ function CardRealisation({
         </a>
         {problematique && (
           <p className={styles.problematiqueProject}>
-            Problématique : {problematique}
+            {t("card_realisation.problem")} {problematique}
           </p>
         )}
         <p className={styles.contentProject}>{content}</p>
@@ -73,7 +75,9 @@ function CardRealisation({
               target="_blank"
               rel="noreferrer"
             >
-              <p className={styles.textGithub}>Front-End</p>
+              <p className={styles.textGithub}>
+                {t("card_realisation.frontend")}
+              </p>
               <IoLogoGithub className={styles.ioLogoGithub} />
             </a>
           )}
@@ -84,7 +88,9 @@ function CardRealisation({
               target="_blank"
               rel="noreferrer"
             >
-              <p className={styles.textGithub}>Back-End</p>
+              <p className={styles.textGithub}>
+                {t("card_realisation.backend")}
+              </p>
               <IoLogoGithub className={styles.ioLogoGithub} />
             </a>
           )}
@@ -164,7 +170,7 @@ export const dataRealisation = [
     picture: "/thisIsHalloween.png",
     content:
       "Création d'un blind test sur le thème d'Halloween. L'utilisateur doit deviner le titre de la chanson et/ou l'artiste. Si la réponse est bonne, il gagne des points. Si la réponse est fausse, il perd des points. Le but est d'obtenir le meilleur score possible.",
-    linkSite: "https://marion-dev.fr/halloween",
+    linkSite: "https://marion-dev.fr/fr/halloween",
     group: "1",
     time: "2 semaines",
   },

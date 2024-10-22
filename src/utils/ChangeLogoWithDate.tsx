@@ -2,7 +2,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 function ChangeLogoWithDate() {
-  const [date, setDate] = useState(new Date());
+  const [, setDate] = useState(new Date());
   const [logo, setLogo] = useState("/logo.png");
 
   useEffect(() => {

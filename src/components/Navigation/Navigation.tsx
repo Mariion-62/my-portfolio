@@ -1,6 +1,6 @@
+import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/src/navigation";
 import { navElements } from "@/types/menu";
-import { useTranslations } from "next-intl";
 import styles from "./navigation.module.scss";
 
 const Navigation = () => {

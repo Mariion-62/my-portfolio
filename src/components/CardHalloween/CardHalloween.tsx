@@ -1,5 +1,4 @@
 import { useTranslations } from "next-intl";
-import { useState } from "react";
 import styles from "../CardHalloween/cardHalloween.module.scss";
 
 export interface CardHalloweenProps {
@@ -17,16 +16,7 @@ export default function CardHalloween({
   onAnswerClick,
 }: CardHalloweenProps) {
   const t = useTranslations();
-  const [showContent, setShowContent] = useState(false);
-  const [findAnswer, setFindAnswer] = useState(false);
 
-  function handleFindAnswer(
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ): void {
-    setShowContent(!showContent);
-    setFindAnswer(!findAnswer);
-  }
-  console.log(linkMusic);
   return (
     <div>
       <div className={styles.card_halloween}>

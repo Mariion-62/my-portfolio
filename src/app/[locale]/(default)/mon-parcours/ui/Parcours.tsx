@@ -1,13 +1,13 @@
 "use client";
 
+import { useTranslations } from "next-intl";
+import { useState, useEffect } from "react";
 import {
   CardParcours,
   CardParcoursProps,
   dataParcours,
 } from "@/src/components/CardParcours/CardParcours";
-import { useState, useEffect } from "react";
 import styles from "./parcours.module.scss";
-import { useTranslations } from "next-intl";
 
 export type DataParcoursType = CardParcoursProps;
 

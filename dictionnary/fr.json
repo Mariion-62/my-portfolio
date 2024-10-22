@@ -1,8 +1,8 @@
 {
-  "navigation": {
-    "home": "Accueil",
-    "project": "Mes réalisations",
-    "careers": "Mon parcours"
+  "card_realisation": {
+    "backend": "Back-End",
+    "frontend": "Front-End",
+    "problem": "Problématique : "
   },
   "exp_careers": {
     "title_exp": "Expériences professionnelles"
@@ -12,9 +12,12 @@
     "legal_notice": "mentions légales"
   },
   "halloween": {
+    "answer": "Réponse",
     "music": {
       "adams_family": "La famille Addams",
       "american_horror_story": "American Horror Story",
+      "buffy": "Buffy contre les vampires",
+      "charmed": "Charmed",
       "coraline": "Coraline",
       "corpse_bride": "Les noces funèbres",
       "dexter": "Dexter",
@@ -24,20 +27,17 @@
       "lion_king": "Le roi lion - Soyez prêtes",
       "ratched": "Ratched",
       "saw": "Saw",
+      "scooby_doo": "Scooby-Doo",
       "scream": "Scream",
       "stranger_things": "Stranger Things",
       "the_little_mermaid": "La petite sirène - Pauvres âmes en perdition",
+      "this_is_halloween": "This is Halloween - L'étrange Noël de Monsieur Jack",
       "thriller": "Thriller - Michael Jackson",
-      "walking_dead": "The Walking Dead",
-      "buffy": "Buffy contre les vampires",
-      "charmed": "Charmed",
-      "scooby_doo": "Scooby-Doo",
-      "this_is_halloween": "This is Halloween - L'étrange Noël de Monsieur Jack"
+      "walking_dead": "The Walking Dead"
     },
+    "next_button": "Suivant",
     "pause": "Pause",
     "play": "Jouer",
-    "answer": "Réponse",
-    "next_button": "Suivant",
     "previous_button": "Précédent",
     "title_music": {
       "title_eight": "Titre 8",
@@ -65,5 +65,13 @@
       "title_two": "Titre 2"
     },
     "title_page": "THIS IS HALLOWEEN"
+  },
+  "homepage": {
+    "description": "Je m'appelle Marion, j'ai {age} ans. Curieuse et dynamique, j'aime relever de nouveaux défis. Après 10 ans dans le domaine du sport adapté, j'ai choisi de me reconvertir dans l'IT pour m'épanouir en tant que développeuse. Passionnée par l'apprentissage et les nouvelles technologies, je suis motivée à contribuer à des projets concrets et innovants. En dehors du développement, j'apprécie voyager, jouer aux jeux vidéo et de société, assister à des concerts et festivals, ou simplement me détendre devant une série, un livre ou de la musique."
+  },
+  "navigation": {
+    "careers": "Mon parcours",
+    "home": "Accueil",
+    "project": "Mes réalisations"
   }
 }
