@@ -1,28 +1,48 @@
 @import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+
 .card_halloween {
   display: flex;
   justify-content: center;
   margin: auto;
   gap: 3rem;
   align-items: center;
-  font-family: "Creepster", cursive;
+  font-family: "Creepster", sans-serif;
   width: max-content;
   height: 12.5rem;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    gap: 1rem;
+    height: auto;
+  }
 }
+
 .container_audio {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: "Creepster", cursive;
+  font-family: "Creepster", sans-serif;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 }
+
 .title {
   font-size: 3.5rem;
   font-weight: 700;
   color: orange;
   height: 10rem;
   margin: 0;
+
+  @media (max-width: 768px) {
+    font-size: 2.5rem;
+    height: auto;
+    text-align: center;
+  }
 }
+
 .container_answer {
   display: flex;
   flex-direction: column;
@@ -30,6 +50,12 @@
   width: 20rem;
   height: 12.5rem;
   align-items: center;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin: 0;
+    height: auto;
+  }
 
   .button_answer {
     margin: 1rem auto;
@@ -39,24 +65,39 @@
     border-radius: 1rem;
     background-color: orange;
     font-weight: 700;
-    font-family: "Creepster", cursive;
+    font-family: "Creepster", sans-serif;
     padding: 0.5rem;
     cursor: pointer;
+
     &:hover {
       color: white;
     }
+
     &:disabled {
       cursor: not-allowed;
       color: grey;
+
       &:hover {
         color: grey;
       }
     }
+
+    @media (max-width: 768px) {
+      font-size: 1.2rem;
+      padding: 0.4rem;
+    }
   }
+
   .answer_text {
     font-size: 2rem;
     font-weight: 700;
     margin: 1rem 2rem;
     color: white;
+
+    @media (max-width: 768px) {
+      font-size: 1.5rem;
+      margin: 1rem;
+      text-align: center;
+    }
   }
 }

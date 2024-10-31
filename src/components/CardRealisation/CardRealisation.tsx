@@ -164,7 +164,7 @@ export const dataRealisation = [
     picture: "/thisIsHalloween.png",
     content:
       "Création d'un blind test sur le thème d'Halloween. L'utilisateur doit deviner le titre de la chanson et/ou l'artiste. Si la réponse est bonne, il gagne des points. Si la réponse est fausse, il perd des points. Le but est d'obtenir le meilleur score possible.",
-    linkSite: "https://marion-dev.fr/halloween",
+    linkSite: "https://marion-dev.fr/fr/halloween",
     group: "1",
     time: "2 semaines",
   },

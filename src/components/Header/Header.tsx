@@ -13,7 +13,7 @@ function Header() {
       <Link id="header" href="/">
         {ChangeLogoWithDate()}
       </Link>
-      {window.innerWidth <= 768 ? <MenuBurger /> : <Navigation />}
+      {typeof window !== "undefined" && window.innerWidth <= 768 ? <MenuBurger /> : <Navigation />}
       <div>
         <div className={styles.iconSocials}>
           <a
