@@ -4,6 +4,10 @@
     "project": "Mes réalisations",
     "careers": "Mon parcours"
   },
+  "error": {
+    "error_404": "Erreur 404",
+    "error_404_message": "Oops... Cette page n'existe pas"
+  },
   "exp_careers": {
     "title_exp": "Expériences professionnelles"
   },

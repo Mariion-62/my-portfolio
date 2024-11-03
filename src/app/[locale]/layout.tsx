@@ -17,7 +17,7 @@ export default function RootLayout({
 }: Readonly<{
   children: ReactNode;
 }>) {
-  const locale = "fr"; // Utilisez la langue par défaut si locale n'est pas défini
+  const locale = "fr";
   const messages = frMessages;
   return (
     <html lang={locale}>
