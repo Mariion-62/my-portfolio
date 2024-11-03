@@ -26,7 +26,6 @@ export default function CardHalloween({
     setShowContent(!showContent);
     setFindAnswer(!findAnswer);
   }
-  console.log(linkMusic);
   return (
     <div>
       <div className={styles.card_halloween}>
