@@ -34,7 +34,7 @@ function ChangeLogoWithDate() {
 
   return (
     <div>
-      <Image src={logo} alt="logo" width={130} height={130} />
+      <Image src={logo} alt="logo" width={150} height={150} />
     </div>
   );
 }

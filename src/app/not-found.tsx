@@ -6,12 +6,12 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body>
         <div className={styles.page404}>
           <Image
             src="/error_404.png"
-            alt="404 Error"
+            alt="Erreur 404, cette page n'existe pas"
             width={400}
             height={400}
           />
