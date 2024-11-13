@@ -6,7 +6,7 @@ import Link from "next/link";
 
 export default function NotFound() {
   return (
-    <html lang="en">
+    <html lang="fr">
       <body>
         <div className={styles.page404}>
           <Image

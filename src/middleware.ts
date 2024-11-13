@@ -4,7 +4,7 @@ export default createMiddleware({
   // A list of all locales that are supported
   locales,
   // Used when no locale matches
-  defaultLocale: "fr",
+  defaultLocale: "en",
   localePrefix,
 });
 
