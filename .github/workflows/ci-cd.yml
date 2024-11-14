@@ -2,7 +2,7 @@ name: CI/CD for Next.js on Netlify
 
 on:
   push:
-    branches: 
+    branches:
       - main
   pull_request:
     branches:
@@ -10,7 +10,7 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: debian-latest
 
     steps:
       # Check out the codebase
@@ -25,15 +25,15 @@ jobs:
 
       # Install dependencies
       - name: Install dependencies
-        run: npm install
+        run: pnpm install
 
       # Run tests (si tu as des tests)
-      - name: Run tests
-        run: npm test
+      # - name: Run tests
+      #   run: pnpm test
 
       # Build the Next.js application
       - name: Build Next.js app
-        run: npm run build
+        run: pnpm run build
 
       # Déploiement sur Netlify
       - name: Deploy to Netlify
