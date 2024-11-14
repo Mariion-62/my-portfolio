@@ -15,12 +15,7 @@
       color: white;
 
       &:hover {
-        background: linear-gradient(
-          43deg,
-          #7068fa 0%,
-          #ff64b4 46%,
-          #ffd94a 100%
-        );
+        background: linear-gradient(43deg, #7068fa 0%, #ff64b4 46%, #ffd94a 100%);
         background-clip: text;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;

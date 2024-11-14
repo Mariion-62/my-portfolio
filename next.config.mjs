@@ -1,4 +1,4 @@
-import createNextIntlPlugin from "next-intl/plugin";
+import createNextIntlPlugin from 'next-intl/plugin';
 
 const withNextIntl = createNextIntlPlugin();
 
@@ -7,6 +7,6 @@ const nextConfig = {};
 
 export default withNextIntl(nextConfig);
 export const i18n = {
-    locales: ['en', 'fr'],
-    defaultLocale: 'en',
+  locales: ['en', 'fr'],
+  defaultLocale: 'en',
 };

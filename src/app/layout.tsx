@@ -1,7 +1,7 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren } from 'react'
 
 const RootLayout = ({ children }: PropsWithChildren) => {
-  return children;
-};
+  return children
+}
 
-export default RootLayout;
+export default RootLayout

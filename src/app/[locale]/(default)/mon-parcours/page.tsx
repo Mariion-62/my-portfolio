@@ -1,5 +1,5 @@
-import Parcours from "./ui/Parcours";
+import Parcours from './ui/Parcours'
 
 export default function Page() {
-  return <Parcours />;
+  return <Parcours />
 }

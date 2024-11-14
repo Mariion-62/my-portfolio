@@ -1,11 +1,11 @@
-"use client";
+'use client'
 
-import Link from "next/link";
-import Image from "next/image";
-import styles from "./header.module.scss";
-import { Navigation } from "../Navigation/Navigation";
-import ChangeLogoWithDate from "@/src/utils/ChangeLogoWithDate";
-import { MenuBurger } from "../MenuBurger/MenuBurger";
+import Image from 'next/image'
+import Link from 'next/link'
+import ChangeLogoWithDate from '@/src/utils/ChangeLogoWithDate'
+import { MenuBurger } from '../MenuBurger/MenuBurger'
+import { Navigation } from '../Navigation/Navigation'
+import styles from './header.module.scss'
 
 function Header() {
   return (
@@ -13,35 +13,19 @@ function Header() {
       <Link id="header" href="/">
         {ChangeLogoWithDate()}
       </Link>
-      {typeof window !== "undefined" && window.innerWidth <= 768 ? <MenuBurger /> : <Navigation />}
+      {typeof window !== 'undefined' && window.innerWidth <= 768 ? <MenuBurger /> : <Navigation />}
       <div>
         <div className={styles.iconSocials}>
-          <a
-            href="https://www.linkedin.com/in/mariongrolleau/"
-            target="_blank"
-            rel="noreferrer"
-          >
-            <Image
-              className={styles.logoLinkedIn}
-              src={"/logoLinkedIn.png"}
-              alt="LinkedIn"
-              width={60}
-              height={60}
-            />
+          <a href="https://www.linkedin.com/in/mariongrolleau/" target="_blank" rel="noreferrer">
+            <Image className={styles.logoLinkedIn} src={'/logoLinkedIn.png'} alt="LinkedIn" width={60} height={60} />
           </a>
           <a href="https://github.com/Mariion-62">
-            <Image
-              src={"/logoGitHub.png"}
-              alt="Github"
-              className={styles.logoGitHub}
-              width={60}
-              height={60}
-            />
+            <Image src={'/logoGitHub.png'} alt="Github" className={styles.logoGitHub} width={60} height={60} />
           </a>
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export { Header };
+export { Header }
