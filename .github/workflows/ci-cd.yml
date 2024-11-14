@@ -1,0 +1,49 @@
+name: CI/CD for Next.js on Netlify
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Check out the codebase
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      # Set up Node.js (par exemple version 18)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+
+      # Installer pnpm
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      # Install dependencies
+      - name: Install dependencies
+        run: pnpm install
+
+      # Run tests (si tu as des tests)
+      # - name: Run tests
+      #   run: pnpm test
+
+      # Build the Next.js application
+      - name: Build Next.js app
+        run: pnpm run build
+
+      # Déploiement sur Netlify
+      - name: Deploy to Netlify
+        if: github.ref == 'refs/heads/main' && success()
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        run: |
+          npx netlify-cli deploy --prod --dir=out --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID

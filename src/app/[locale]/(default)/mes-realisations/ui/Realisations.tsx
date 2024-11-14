@@ -1,27 +1,25 @@
-"use client";
+'use client'
 
-import { useEffect, useState } from "react";
-import styles from "./realisation.module.scss";
+import { useEffect, useState } from 'react'
 import {
   CardRealisation,
   CardRealisationProps,
-  dataRealisation,
-} from "@/src/components/CardRealisation/CardRealisation";
+  dataRealisation
+} from '@/src/components/CardRealisation/CardRealisation'
+import styles from './realisation.module.scss'
 
-export type DataRealisationType = CardRealisationProps;
+export type DataRealisationType = CardRealisationProps
 
 function Realisations() {
-  const [cardRealisations, setCardRealisations] = useState<
-    DataRealisationType[]
-  >([]);
+  const [cardRealisations, setCardRealisations] = useState<DataRealisationType[]>([])
   useEffect(() => {
-    const dataRealisationCopy: CardRealisationProps[] = [...dataRealisation];
+    const dataRealisationCopy: CardRealisationProps[] = [...dataRealisation]
 
     dataRealisationCopy.sort((a, b) => {
-      return b.id - a.id;
-    });
-    setCardRealisations(dataRealisationCopy);
-  }, []);
+      return b.id - a.id
+    })
+    setCardRealisations(dataRealisationCopy)
+  }, [])
 
   return (
     <div className={styles.realisation}>
@@ -41,10 +39,10 @@ function Realisations() {
               problematique={cardRealisation.problematique}
             />
           </div>
-        );
+        )
       })}
     </div>
-  );
+  )
 }
 
-export { Realisations };
+export { Realisations }

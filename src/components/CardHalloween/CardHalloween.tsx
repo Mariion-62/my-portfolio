@@ -1,31 +1,16 @@
-import { useTranslations } from "next-intl";
-import { useState } from "react";
-import styles from "../CardHalloween/cardHalloween.module.scss";
+import { useTranslations } from 'next-intl'
+import styles from '../CardHalloween/cardHalloween.module.scss'
 
 export interface CardHalloweenProps {
-  title: string;
-  answer: string;
-  linkMusic: string;
-  isAswerVisible: boolean;
-  onAnswerClick: () => void;
+  title: string
+  answer: string
+  linkMusic: string
+  isAswerVisible: boolean
+  onAnswerClick: () => void
 }
-export default function CardHalloween({
-  title,
-  answer,
-  linkMusic,
-  isAswerVisible,
-  onAnswerClick,
-}: CardHalloweenProps) {
-  const t = useTranslations();
-  const [showContent, setShowContent] = useState(false);
-  const [findAnswer, setFindAnswer] = useState(false);
+export default function CardHalloween({ title, answer, linkMusic, isAswerVisible, onAnswerClick }: CardHalloweenProps) {
+  const t = useTranslations()
 
-  function handleFindAnswer(
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ): void {
-    setShowContent(!showContent);
-    setFindAnswer(!findAnswer);
-  }
   return (
     <div>
       <div className={styles.card_halloween}>
@@ -36,18 +21,12 @@ export default function CardHalloween({
           </audio>
         </div>
         <div className={styles.container_answer}>
-          <button
-            type="button"
-            onClick={onAnswerClick}
-            className={styles.button_answer}
-          >
-            {t("halloween.answer")}
+          <button type="button" onClick={onAnswerClick} className={styles.button_answer}>
+            {t('halloween.answer')}
           </button>
-          <div>
-            {isAswerVisible && <p className={styles.answer_text}>{answer}</p>}
-          </div>
+          <div>{isAswerVisible && <p className={styles.answer_text}>{answer}</p>}</div>
         </div>
       </div>
     </div>
-  );
+  )
 }

@@ -1,6 +1,6 @@
-"use client";
-import { CardHomepage } from "@/src/components/CardHomepage/CardHomepage";
-import { Description } from "@/src/components/Description/Description";
+'use client'
+import { CardHomepage } from '@/src/components/CardHomepage/CardHomepage'
+import { Description } from '@/src/components/Description/Description'
 
 export default function Page() {
   return (
@@ -8,5 +8,5 @@ export default function Page() {
       <Description />
       <CardHomepage />
     </>
-  );
+  )
 }

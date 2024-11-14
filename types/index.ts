@@ -1,3 +1,3 @@
-import { MessageKeys, NestedKeyOf } from "next-intl";
+import { MessageKeys, NestedKeyOf } from 'next-intl'
 
-export type DictionaryKeys = MessageKeys<Dictionary, NestedKeyOf<Dictionary>>;
+export type DictionaryKeys = MessageKeys<Dictionary, NestedKeyOf<Dictionary>>

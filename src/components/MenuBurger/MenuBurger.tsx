@@ -1,23 +1,20 @@
-import React, { useState } from "react";
-import { navElements } from "@/types/menu";
-import { Link } from "@/src/navigation";
-import { useTranslations } from "next-intl";
-import styles from "./menuBurger.module.scss";
+import { useTranslations } from 'next-intl'
+import React, { useState } from 'react'
+import { Link } from '@/src/navigation'
+import { navElements } from '@/types/menu'
+import styles from './menuBurger.module.scss'
 
 const MenuBurger = () => {
-  const t = useTranslations();
-  const [isOpen, setIsOpen] = useState(false);
+  const t = useTranslations()
+  const [isOpen, setIsOpen] = useState(false)
 
   const toggleMenu = () => {
-    setIsOpen((prev) => !prev);
-  };
+    setIsOpen((prev) => !prev)
+  }
 
   return (
     <div className={styles.menuBurger}>
-      <button
-        className={!isOpen ? styles.burgerButtonOpen : styles.displayNone}
-        onClick={toggleMenu}
-      >
+      <button className={!isOpen ? styles.burgerButtonOpen : styles.displayNone} onClick={toggleMenu}>
         ☰
       </button>
       {isOpen && (
@@ -28,11 +25,7 @@ const MenuBurger = () => {
           {navElements.map((element) => (
             <div key={element.label} className={styles.navItem}>
               {element.link && (
-                <Link
-                  href={element.link}
-                  className={styles.link}
-                  onClick={toggleMenu}
-                >
+                <Link href={element.link} className={styles.link} onClick={toggleMenu}>
                   {t(element.label)}
                 </Link>
               )}
@@ -41,7 +34,7 @@ const MenuBurger = () => {
         </nav>
       )}
     </div>
-  );
-};
+  )
+}
 
-export { MenuBurger };
+export { MenuBurger }
