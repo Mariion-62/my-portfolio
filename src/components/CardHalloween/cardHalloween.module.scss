@@ -6,7 +6,6 @@
   margin: auto;
   gap: 3rem;
   align-items: center;
-  font-family: 'Creepster';
   width: max-content;
   height: 12.5rem;
 
@@ -22,7 +21,6 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  font-family: 'Creepster';
 
   @media (max-width: 768px) {
     width: 100%;
@@ -65,7 +63,6 @@
     border-radius: 1rem;
     background-color: orange;
     font-weight: 700;
-    font-family: 'Creepster';
     padding: 0.5rem;
     cursor: pointer;
 
