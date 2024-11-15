@@ -55,7 +55,7 @@ importers:
         specifier: ^8.14.0
         version: 8.14.0(eslint@9.15.0(jiti@1.21.6))(typescript@5.6.3)
       eslint:
-        specifier: ^9.15.0
+        specifier: ^9.14.0
         version: 9.15.0(jiti@1.21.6)
       eslint-config-google:
         specifier: ^0.14.0
