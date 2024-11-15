@@ -16,7 +16,6 @@ export interface CardRealisationProps {
 }
 
 function CardRealisation({
-  id,
   title,
   picture,
   content,
@@ -26,46 +25,44 @@ function CardRealisation({
   time,
   problematique,
   linkGithubBack
-}: CardRealisationProps) {
+}: Readonly<CardRealisationProps>) {
   return (
-    <>
-      <div className={styles.allCard}>
-        <h2 className={styles.titleProject}>{title} </h2>
-        <div className={styles.groupTime}>
-          <div className={styles.groupProject}>
-            <p>
-              <IoPeopleSharp size={25} />
-            </p>
-            <p className={styles.contentGroup}>: {group}</p>
-          </div>
-          <div className={styles.timeProject}>
-            <p>
-              <IoTimeSharp size={25} />
-            </p>
-            <p className={styles.contentTime}> : {time}</p>
-          </div>
+    <div className={styles.allCard}>
+      <h2 className={styles.titleProject}>{title} </h2>
+      <div className={styles.groupTime}>
+        <div className={styles.groupProject}>
+          <p>
+            <IoPeopleSharp size={25} />
+          </p>
+          <p className={styles.contentGroup}>: {group}</p>
         </div>
-        <a className={styles.linkSite} href={linkSite} target="_blank" rel="noreferrer">
-          <Image className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
-        </a>
-        {problematique && <p className={styles.problematiqueProject}>Problématique : {problematique}</p>}
-        <p className={styles.contentProject}>{content}</p>
-        <div className={styles.gitHub}>
-          {linkGithub && (
-            <a className={styles.linkGithub} href={linkGithub} target="_blank" rel="noreferrer">
-              <p className={styles.textGithub}>Front-End</p>
-              <IoLogoGithub className={styles.ioLogoGithub} />
-            </a>
-          )}
-          {linkGithubBack && (
-            <a className={styles.linkGithub} href={linkGithubBack} target="_blank" rel="noreferrer">
-              <p className={styles.textGithub}>Back-End</p>
-              <IoLogoGithub className={styles.ioLogoGithub} />
-            </a>
-          )}
+        <div className={styles.timeProject}>
+          <p>
+            <IoTimeSharp size={25} />
+          </p>
+          <p className={styles.contentTime}> : {time}</p>
         </div>
       </div>
-    </>
+      <a className={styles.linkSite} href={linkSite} target="_blank" rel="noreferrer">
+        <Image className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
+      </a>
+      {problematique && <p className={styles.problematiqueProject}>Problématique : {problematique}</p>}
+      <p className={styles.contentProject}>{content}</p>
+      <div className={styles.gitHub}>
+        {linkGithub && (
+          <a className={styles.linkGithub} href={linkGithub} target="_blank" rel="noreferrer">
+            <p className={styles.textGithub}>Front-End</p>
+            <IoLogoGithub className={styles.ioLogoGithub} />
+          </a>
+        )}
+        {linkGithubBack && (
+          <a className={styles.linkGithub} href={linkGithubBack} target="_blank" rel="noreferrer">
+            <p className={styles.textGithub}>Back-End</p>
+            <IoLogoGithub className={styles.ioLogoGithub} />
+          </a>
+        )}
+      </div>
+    </div>
   )
 }
 
