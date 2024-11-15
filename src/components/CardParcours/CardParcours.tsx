@@ -92,6 +92,7 @@ export interface CardParcoursProps {
 }
 
 export function CardParcours({
+  id,
   dateBegin,
   dateEnd,
   job,
@@ -102,26 +103,24 @@ export function CardParcours({
   expThree,
   expFour,
   expFive
-}: CardParcoursProps) {
+}: Readonly<CardParcoursProps>) {
   return (
-    <>
-      <div className={styles.cardParcours}>
-        <h3 className={styles.dateParcours}>
-          {dateBegin} - {dateEnd}
-        </h3>
-        <p className={styles.job}>{job}</p>
-        <p className={styles.enterprise}>{enterprise}</p>
-        <ul className={styles.xpParcours}>
-          <li className={styles.listParcours}>{experience}</li>
-          <li className={styles.listParcours}>{expTwo}</li>
-          <li className={styles.listParcours}>{expThree}</li>
-          <li className={styles.listParcours}>{expFour}</li>
-          <li className={styles.listParcours}>{expFive}</li>
-        </ul>
-        <div className={styles.logoParcours}>
-          <Image className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
-        </div>
+    <div className={styles.cardParcours}>
+      <h3 className={styles.dateParcours}>
+        {dateBegin} - {dateEnd}
+      </h3>
+      <p className={styles.job}>{job}</p>
+      <p className={styles.enterprise}>{enterprise}</p>
+      <ul className={styles.xpParcours}>
+        <li className={styles.listParcours}>{experience}</li>
+        <li className={styles.listParcours}>{expTwo}</li>
+        <li className={styles.listParcours}>{expThree}</li>
+        <li className={styles.listParcours}>{expFour}</li>
+        <li className={styles.listParcours}>{expFive}</li>
+      </ul>
+      <div className={styles.logoParcours}>
+        <Image className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
       </div>
-    </>
+    </div>
   )
 }

@@ -1,11 +1,7 @@
 import Halloween from './ui/Halloween'
 
 function Page() {
-  return (
-    <>
-      <Halloween />
-    </>
-  )
+  return <Halloween />
 }
 
 export default Page

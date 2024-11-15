@@ -8,7 +8,13 @@ export interface CardHalloweenProps {
   isAswerVisible: boolean
   onAnswerClick: () => void
 }
-export default function CardHalloween({ title, answer, linkMusic, isAswerVisible, onAnswerClick }: CardHalloweenProps) {
+export default function CardHalloween({
+  title,
+  answer,
+  linkMusic,
+  isAswerVisible,
+  onAnswerClick
+}: Readonly<CardHalloweenProps>) {
   const t = useTranslations()
 
   return (
