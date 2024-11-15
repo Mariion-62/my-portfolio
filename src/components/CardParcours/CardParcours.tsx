@@ -78,6 +78,7 @@ export const dataParcours = [
 ]
 
 export interface CardParcoursProps {
+  id: number
   dateBegin: string
   dateEnd: string
   job: string
