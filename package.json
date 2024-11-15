@@ -40,12 +40,22 @@
     "lint-staged": "^15.2.10",
     "prettier": "^3.3.3",
     "sonarqube-scanner": "^4.2.5",
+    "sonarqube-scanner": "^4.2.5",
     "typescript": "^5.6.3"
   },
   "husky": {
     "hooks": {
       "pre-commit": "echo '[Husky pre-commit]'"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.json": [
+      "prettier --write"
+    ]
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
