@@ -92,6 +92,7 @@ export interface CardParcoursProps {
 }
 
 export function CardParcours({
+  id,
   dateBegin,
   dateEnd,
   job,
