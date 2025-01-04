@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="2" failures="1" errors="0" time="2.204">
+  <testsuite name="CardHalloween" errors="0" failures="1" skipped="0" timestamp="2025-01-04T10:01:07" time="1.49" tests="2">
+    <testcase classname="CardHalloween should render component CardHallowen correctly" name="CardHalloween should render component CardHallowen correctly" time="0.131">
+    </testcase>
+    <testcase classname="CardHalloween should render answer when user click on button answer" name="CardHalloween should render answer when user click on button answer" time="0.152">
+      <failure>TestingLibraryElementError: Unable to find an accessible element with the role &quot;button&quot; and name &quot;halloween.answer&quot;
+
+Here are the accessible roles:
+
+  heading:
+
+  Name &quot;Test&quot;:
+  &lt;h2
+    class=&quot;title&quot;
+  /&gt;
+
+  --------------------------------------------------
+  button:
+
+  Name &quot;Réponse&quot;:
+  &lt;button
+    class=&quot;button_answer&quot;
+    type=&quot;button&quot;
+  /&gt;
+
+  --------------------------------------------------
+  paragraph:
+
+  Name &quot;&quot;:
+  &lt;p
+    class=&quot;answer_text&quot;
+  /&gt;
+
+  --------------------------------------------------
+
+Ignored nodes: comments, script, style
+&lt;body&gt;
+  &lt;div&gt;
+    &lt;div&gt;
+      &lt;div
+        class=&quot;card_halloween&quot;
+      &gt;
+        &lt;div
+          class=&quot;container_audio&quot;
+        &gt;
+          &lt;h2
+            class=&quot;title&quot;
+          &gt;
+            Test
+          &lt;/h2&gt;
+          &lt;audio
+            controls=&quot;&quot;
+          &gt;
+            &lt;source
+              src=&quot;Test Link&quot;
+              type=&quot;audio/mpeg&quot;
+            /&gt;
+          &lt;/audio&gt;
+        &lt;/div&gt;
+        &lt;div
+          class=&quot;container_answer&quot;
+        &gt;
+          &lt;button
+            class=&quot;button_answer&quot;
+            type=&quot;button&quot;
+          &gt;
+            Réponse
+          &lt;/button&gt;
+          &lt;div&gt;
+            &lt;p
+              class=&quot;answer_text&quot;
+            &gt;
+              Test Response
+            &lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+    at Object.getElementError (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/@testing-library+dom@10.4.0/node_modules/@testing-library/dom/dist/config.js:37:19)
+    at /home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/@testing-library+dom@10.4.0/node_modules/@testing-library/dom/dist/query-helpers.js:76:38
+    at /home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/@testing-library+dom@10.4.0/node_modules/@testing-library/dom/dist/query-helpers.js:52:17
+    at /home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/@testing-library+dom@10.4.0/node_modules/@testing-library/dom/dist/query-helpers.js:95:19
+    at Object.getByRole (/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardHalloween/cardHalloween.spec.tsx:46:19)
+    at Promise.then.completed (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at _runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:121:9)
+    at run (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:444:34)</failure>
+    </testcase>
+  </testsuite>
+</testsuites>
