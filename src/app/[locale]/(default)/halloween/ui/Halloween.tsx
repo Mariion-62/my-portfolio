@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import React, { useState } from 'react'
-import CardHalloween from '@/src/components/CardHalloween/CardHalloween'
+import { CardHalloween } from '@/src/components/CardHalloween/CardHalloween'
 import styles from './halloween.module.scss'
 
 export default function Halloween() {
