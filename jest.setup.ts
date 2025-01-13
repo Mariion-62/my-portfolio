@@ -1,13 +1,11 @@
 import '@testing-library/jest-dom'
-import { RenderOptions, render } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-
+import { RenderOptions, RenderResult, render } from '@testing-library/react'
+import userEvent, { UserEvent } from '@testing-library/user-event'
 import React from 'react'
-export function setup(jsx: React.ReactNode, args: RenderOptions) {
+
+export function setup(jsx: React.ReactNode, args: RenderOptions): RenderResult & { user: UserEvent } {
   return {
     user: userEvent.setup(),
-    // Import `render` from the framework library of your choice.
-    // See https://testing-library.com/docs/dom-testing-library/install#wrappers
     ...render(jsx, args)
   }
 }

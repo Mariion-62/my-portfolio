@@ -1,13 +1,13 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import { useState, useEffect } from 'react'
-import { CardParcours, CardParcoursProps, dataParcours } from '@/src/components/CardParcours/CardParcours'
+import { useState, useEffect, ReactElement } from 'react'
 import styles from './parcours.module.scss'
+import { CardParcours, CardParcoursProps, dataParcours } from '@/src/components/CardParcours/CardParcours'
 
 export type DataParcoursType = CardParcoursProps
 
-export default function Parcours() {
+export default function Parcours(): ReactElement {
   const [allParcours, setAllParcours] = useState<DataParcoursType[]>([])
   useEffect(() => {
     const dataParcoursCopy: CardParcoursProps[] = [...dataParcours]

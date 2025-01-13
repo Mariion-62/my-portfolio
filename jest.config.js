@@ -16,12 +16,12 @@ const customJestConfig = {
   },
   testEnvironment: 'jest-environment-jsdom', // Utiliser l'environnement jsdom
   reporters: [
-    'default', // Reporter par défaut de Jest
+    'default',
     [
-      'jest-junit',
+      'jest-sonar-reporter',
       {
-        outputDirectory: './reports', // Dossier de sortie des rapports
-        outputName: 'junit.xml' // Nom du fichier de rapport
+        outputDirectory: 'coverage',
+        outputName: 'test-report.xml'
       }
     ]
   ],
@@ -31,7 +31,7 @@ const customJestConfig = {
     '!src/**/*.d.ts', // Exclure les fichiers de définition TypeScript
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
-
+  coverageReporters: ['lcov', 'text'],
   coverageDirectory: 'coverage'
 }
 

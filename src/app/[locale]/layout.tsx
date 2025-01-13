@@ -2,10 +2,10 @@ import type { Metadata } from 'next'
 import './globals.scss'
 
 import { NextIntlClientProvider } from 'next-intl'
-import { ReactNode } from 'react'
+import { ReactElement, ReactNode } from 'react'
+import frMessages from '../../../dictionnary/fr.json'
 import { Footer } from '@/src/components/Footer/Footer'
 import { Header } from '@/src/components/Header/Header'
-import frMessages from '../../../dictionnary/fr.json'
 
 export const metadata: Metadata = {
   title: 'Mariion-dev',
@@ -16,12 +16,12 @@ export default function RootLayout({
   children
 }: Readonly<{
   children: ReactNode
-}>) {
+}>): ReactElement {
   const locale = 'fr'
   const messages = frMessages
   return (
     <html lang={locale}>
-      <body>
+      <body suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <Header />
           {children}

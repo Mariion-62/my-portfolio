@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import { IoLogoGithub, IoPeopleSharp, IoTimeSharp } from 'react-icons/io5'
 import styles from './cardRealisation.module.scss'
 
@@ -25,7 +26,7 @@ function CardRealisation({
   time,
   problematique,
   linkGithubBack
-}: Readonly<CardRealisationProps>) {
+}: Readonly<CardRealisationProps>): ReactElement {
   return (
     <div className={styles.allCard}>
       <h2 className={styles.titleProject}>{title} </h2>
@@ -44,7 +45,7 @@ function CardRealisation({
         </div>
       </div>
       <a className={styles.linkSite} href={linkSite} target="_blank" rel="noreferrer">
-        <Image className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
+        <Image priority className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
       </a>
       {problematique && <p className={styles.problematiqueProject}>Problématique : {problematique}</p>}
       <p className={styles.contentProject}>{content}</p>

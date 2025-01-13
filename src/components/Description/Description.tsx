@@ -1,9 +1,10 @@
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import avatar from './avatar.png'
 import styles from './description.module.scss'
 import ordi from './ordi.png'
 
-function Description() {
+function Description(): ReactElement {
   const birthDate = new Date(1990, 11, 27)
   const today = new Date()
   const diffInMilliseconds = today.getTime() - birthDate.getTime()
@@ -20,8 +21,8 @@ function Description() {
         épanouir en tant que développeuse.
       </p>
       <div className={styles.img}>
-        <Image className={styles.avatar} src={avatar} alt="avatar Marion" width={300} height={300} />
-        <Image className={styles.iconeOrdi} src={ordi} alt="icone ordi" width={600} height={600} />
+        <Image priority className={styles.avatar} src={avatar} alt="avatar Marion" width={300} height={300} />
+        <Image priority className={styles.iconeOrdi} src={ordi} alt="icone ordi" width={600} height={600} />
       </div>
     </div>
   )

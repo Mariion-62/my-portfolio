@@ -3,8 +3,8 @@ import '@testing-library/jest-dom'
 import userEvent from '@testing-library/user-event'
 import { NextIntlClientProvider } from 'next-intl'
 import React, { PropsWithChildren } from 'react'
-import messages from '@/dictionnary/fr.json'
 import { CardHalloween } from '../CardHalloween/CardHalloween'
+import messages from '@/dictionnary/fr.json'
 
 const wrapper = ({ children }: PropsWithChildren) => (
   <NextIntlClientProvider locale="fr" messages={messages} timeZone="Europe/Paris">

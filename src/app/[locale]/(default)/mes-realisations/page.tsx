@@ -1,6 +1,7 @@
+import { ReactElement } from 'react'
 import { Realisations } from '@/src/app/[locale]/(default)/mes-realisations/ui/Realisations'
 
-function Page() {
+function Page(): ReactElement {
   return <Realisations />
 }
 

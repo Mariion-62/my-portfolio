@@ -1,9 +1,10 @@
 import { useTranslations } from 'next-intl'
+import { ReactElement } from 'react'
+import styles from './navigation.module.scss'
 import { Link, usePathname } from '@/src/navigation'
 import { navElements } from '@/types/menu'
-import styles from './navigation.module.scss'
 
-const Navigation = () => {
+function Navigation(): ReactElement {
   const t = useTranslations()
   const pathname = usePathname()
   return (
