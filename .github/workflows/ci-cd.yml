@@ -32,8 +32,8 @@ jobs:
         run: pnpm install
 
       # Run tests (si tu as des tests)
-      # - name: Run tests
-      #   run: pnpm test
+      - name: Run tests
+        run: pnpm test:cov
 
       # Build the Next.js application
       - name: Build Next.js app
