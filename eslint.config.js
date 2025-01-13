@@ -34,7 +34,6 @@ export default [
         version: 'detect' // Automatically detect the React version
       }
     },
-    cache: false,
     rules: {
       'require-jsdoc': 'off',
       'new-cap': 'off',
