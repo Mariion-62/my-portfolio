@@ -1,4 +1,4 @@
-const nextJest = require('next/jest')
+import nextJest from 'next/jest'
 
 // Fournir le chemin de base de votre application Next.js
 const createJestConfig = nextJest({
