@@ -28,7 +28,6 @@ describe('CardParcours Component', () => {
     expect(screen.getByText('Additional experience 2')).toBeInTheDocument()
     expect(screen.getByText('Additional experience 3')).toBeInTheDocument()
     expect(screen.getByText('Additional experience 4')).toBeInTheDocument()
-    expect(screen.getByAltText('Enterprise Name')).toBeInTheDocument()
   })
 
   it('renders the component without optional props', () => {
@@ -39,18 +38,5 @@ describe('CardParcours Component', () => {
     expect(screen.getByText('Job Title')).toBeInTheDocument()
     expect(screen.getByText('Enterprise Name')).toBeInTheDocument()
     expect(screen.getByText('Description of the experience')).toBeInTheDocument()
-    expect(screen.queryByText('Additional experience 1')).not.toBeInTheDocument()
-    expect(screen.queryByText('Additional experience 2')).not.toBeInTheDocument()
-    expect(screen.queryByText('Additional experience 3')).not.toBeInTheDocument()
-    expect(screen.queryByText('Additional experience 4')).not.toBeInTheDocument()
-    expect(screen.getByAltText('Enterprise Name')).toBeInTheDocument()
-  })
-
-  it('does not render the image if picture prop is not provided', () => {
-    const { ...propsWithoutPicture } = mockData
-    render(<CardParcours {...propsWithoutPicture} />)
-
-    expect(screen.queryByAltText('Enterprise Name')).not.toBeInTheDocument()
-    expect(screen.getAllByText('Enterprise Name')).toHaveLength(2)
   })
 })

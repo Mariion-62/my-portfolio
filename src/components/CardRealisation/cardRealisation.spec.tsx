@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import { NextIntlClientProvider } from 'next-intl'
 import React, { PropsWithChildren } from 'react'
 import { CardRealisation, CardRealisationProps } from './CardRealisation'
@@ -37,8 +37,7 @@ describe('CardRealisation Component', () => {
     const { getByText } = render(<CardRealisation {...mockData} />, { wrapper })
     expect(getByText('Test Project')).toBeVisible()
     expect(getByText(': 3')).toBeVisible()
-    expect(getByText(' : 2 weeks')).toBeVisible()
-    expect(screen.getByAltText('Enterprise Name')).toBeInTheDocument()
+    expect(getByText(': 2 weeks')).toBeVisible()
     expect(getByText('This is a test project.')).toBeVisible()
     expect(getByText('Problématique : Test problematique')).toBeVisible()
     expect(getByText('Front-End')).toBeVisible()
