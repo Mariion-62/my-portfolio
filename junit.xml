@@ -1,29 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="9" failures="1" errors="0" time="3.073">
-  <testsuite name="CardParcours Component" errors="0" failures="0" skipped="0" timestamp="2025-01-10T23:22:07" time="1.355" tests="3">
-    <testcase classname="CardParcours Component renders the component with all props" name="CardParcours Component renders the component with all props" time="0.097">
+<testsuites name="jest tests" tests="9" failures="3" errors="0" time="4.884">
+  <testsuite name="CardParcours Component" errors="0" failures="2" skipped="0" timestamp="2025-01-15T20:42:05" time="2.62" tests="3">
+    <testcase classname="CardParcours Component renders the component with all props" name="CardParcours Component renders the component with all props" time="0.141">
     </testcase>
-    <testcase classname="CardParcours Component renders the component without optional props" name="CardParcours Component renders the component without optional props" time="0.024">
+    <testcase classname="CardParcours Component renders the component without optional props" name="CardParcours Component renders the component without optional props" time="0.023">
+      <failure>Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found &lt;li class=&quot;listParcours&quot;&gt;Additional experience 1&lt;/li&gt; instead
+    at Object.toBeInTheDocument (/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardParcours/cardParcours.spec.tsx:42:63)
+    at Promise.then.completed (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:121:9)
+    at run (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
     </testcase>
-    <testcase classname="CardParcours Component does not render the image if picture prop is not provided" name="CardParcours Component does not render the image if picture prop is not provided" time="0.007">
+    <testcase classname="CardParcours Component does not render the image if picture prop is not provided" name="CardParcours Component does not render the image if picture prop is not provided" time="0.015">
+      <failure>Error: expect(element).not.toBeInTheDocument()
+
+expected document not to contain element, found &lt;img alt=&quot;Enterprise Name&quot; class=&quot;pictureParcours&quot; data-nimg=&quot;1&quot; decoding=&quot;async&quot; height=&quot;100&quot; src=&quot;/_next/image?url=%2Fpath%2Fto%2Fimage.png&amp;w=256&amp;q=75&quot; srcset=&quot;/_next/image?url=%2Fpath%2Fto%2Fimage.png&amp;w=128&amp;q=75 1x, /_next/image?url=%2Fpath%2Fto%2Fimage.png&amp;w=256&amp;q=75 2x&quot; style=&quot;color: transparent;&quot; width=&quot;100&quot; /&gt; instead
+    at Object.toBeInTheDocument (/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardParcours/cardParcours.spec.tsx:53:58)
+    at Promise.then.completed (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:298:28)
+    at new Promise (&lt;anonymous&gt;)
+    at callAsyncCircusFn (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/utils.js:231:10)
+    at _callCircusTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:316:40)
+    at processTicksAndRejections (node:internal/process/task_queues:105:5)
+    at _runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:252:3)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:126:9)
+    at _runTestsForDescribeBlock (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:121:9)
+    at run (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/run.js:71:3)
+    at runAndTransformResultsToJestFormat (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapterInit.js:122:21)
+    at jestAdapter (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-circus@29.7.0/node_modules/jest-circus/build/legacy-code-todo-rewrite/jestAdapter.js:79:19)
+    at runTestInternal (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:367:16)
+    at runTest (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/runTest.js:444:34)
+    at Object.worker (/home/marion/Code-Sources/projectsPerso/my-portfolio/node_modules/.pnpm/jest-runner@29.7.0/node_modules/jest-runner/build/testWorker.js:106:12)</failure>
     </testcase>
   </testsuite>
-  <testsuite name="CardHalloween" errors="0" failures="0" skipped="0" timestamp="2025-01-10T23:22:07" time="1.553" tests="2">
-    <testcase classname="CardHalloween should render component CardHallowen correctly" name="CardHalloween should render component CardHallowen correctly" time="0.149">
+  <testsuite name="CardHalloween" errors="0" failures="0" skipped="0" timestamp="2025-01-15T20:42:05" time="2.659" tests="2">
+    <testcase classname="CardHalloween should render component CardHallowen correctly" name="CardHalloween should render component CardHallowen correctly" time="0.178">
     </testcase>
-    <testcase classname="CardHalloween should render answer when user click on button answer" name="CardHalloween should render answer when user click on button answer" time="0.098">
-    </testcase>
-  </testsuite>
-  <testsuite name="CardHomepage" errors="0" failures="0" skipped="0" timestamp="2025-01-10T23:22:07" time="1.515" tests="3">
-    <testcase classname="CardHomepage should render component CardHomepage correctly" name="CardHomepage should render component CardHomepage correctly" time="0.156">
-    </testcase>
-    <testcase classname="CardHomepage should good page when user click on link careers" name="CardHomepage should good page when user click on link careers" time="0.056">
-    </testcase>
-    <testcase classname="CardHomepage should good page when user click on link project" name="CardHomepage should good page when user click on link project" time="0.035">
+    <testcase classname="CardHalloween should render answer when user click on button answer" name="CardHalloween should render answer when user click on button answer" time="0.153">
     </testcase>
   </testsuite>
-  <testsuite name="CardRealisation Component" errors="0" failures="1" skipped="0" timestamp="2025-01-10T23:22:07" time="1.669" tests="1">
-    <testcase classname="CardRealisation Component renders the title" name="CardRealisation Component renders the title" time="0.179">
+  <testsuite name="CardHomepage" errors="0" failures="0" skipped="0" timestamp="2025-01-15T20:42:05" time="2.713" tests="3">
+    <testcase classname="CardHomepage should render component CardHomepage correctly" name="CardHomepage should render component CardHomepage correctly" time="0.186">
+    </testcase>
+    <testcase classname="CardHomepage should good page when user click on link careers" name="CardHomepage should good page when user click on link careers" time="0.131">
+    </testcase>
+    <testcase classname="CardHomepage should good page when user click on link project" name="CardHomepage should good page when user click on link project" time="0.042">
+    </testcase>
+  </testsuite>
+  <testsuite name="CardRealisation Component" errors="0" failures="1" skipped="0" timestamp="2025-01-15T20:42:05" time="2.744" tests="1">
+    <testcase classname="CardRealisation Component renders the title" name="CardRealisation Component renders the title" time="0.258">
       <failure>TestingLibraryElementError: Unable to find an element with the text: : 2 weeks (normalized from &apos; : 2 weeks&apos;). This could be because the text is broken up by multiple elements. In this case, you can provide a function for your text matcher to make your matcher more flexible.
 
 Ignored nodes: comments, script, style

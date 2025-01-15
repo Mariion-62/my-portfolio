@@ -1,4 +1,4 @@
-import nextJest from 'next/jest'
+import nextJest from 'next/jest.js'
 
 // Fournir le chemin de base de votre application Next.js
 const createJestConfig = nextJest({
@@ -36,4 +36,4 @@ const customJestConfig = {
   testResultsProcessor: 'jest-sonar-reporter'
 }
 
-module.exports = createJestConfig(customJestConfig)
+export default createJestConfig(customJestConfig)
