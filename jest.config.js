@@ -31,7 +31,6 @@ const customJestConfig = {
     '!src/**/*.d.ts', // Exclure les fichiers de définition TypeScript
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
-  coverageReporters: ['lcov', 'text'],
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'text'],
   testResultsProcessor: 'jest-sonar-reporter'
