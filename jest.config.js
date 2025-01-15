@@ -32,7 +32,9 @@ const customJestConfig = {
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
   coverageReporters: ['lcov', 'text'],
-  coverageDirectory: 'coverage'
+  coverageDirectory: 'coverage',
+  coverageReporters: ['lcov', 'text'],
+  testResultsProcessor: 'jest-sonar-reporter'
 }
 
 module.exports = createJestConfig(customJestConfig)

@@ -35,6 +35,22 @@ jobs:
       - name: Run tests
         run: pnpm test:cov
 
+        # Exécuter l'analyse SonarQube
+      - name: Run SonarScanner
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        run: |
+          sonar-scanner \
+            -Dsonar.projectKey=my-portfolio \
+            -Dsonar.organization=mariion-dev \
+            -Dsonar.sources=src \
+            -Dsonar.language=js \
+            -Dsonar.sourceEncoding=UTF-8 \
+            -Dsonar.tests=src \
+            -Dsonar.test.inclusions="**/*.spec.js,**/*.test.js" \
+            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+            -Dsonar.testExecutionReportPaths=coverage/test-report.xml
+
       # Build the Next.js application
       - name: Build Next.js app
         run: pnpm run build
