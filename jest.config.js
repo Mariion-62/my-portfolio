@@ -18,7 +18,7 @@ const customJestConfig = {
   reporters: [
     'default',
     [
-      'jest-sonar-reporter',
+      'jest-junit',
       {
         outputDirectory: 'coverage',
         outputName: 'test-report.xml'
@@ -32,8 +32,7 @@ const customJestConfig = {
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
   coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text'],
-  testResultsProcessor: 'jest-sonar-reporter'
+  coverageReporters: ['lcov', 'text']
 }
 
 export default createJestConfig(customJestConfig)
