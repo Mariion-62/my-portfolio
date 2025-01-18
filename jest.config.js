@@ -18,10 +18,10 @@ const customJestConfig = {
   reporters: [
     'default',
     [
-      'jest-junit',
+      'jest-sonar',
       {
         outputDirectory: 'coverage',
-        outputName: 'test-report.xml'
+        outputName: 'sonar-report.xml'
       }
     ]
   ],
