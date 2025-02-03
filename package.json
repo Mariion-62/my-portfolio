@@ -12,10 +12,9 @@
     "format": "prettier --write .",
     "sonar": "sonar-scanner",
     "test": "jest --watch",
-    "test:cov": "jest --coverage --reporters=default --reporters=jest-sonar-reporter --watchAll=false --ci"
+    "test:cov": "jest --coverage --reporters=default --watchAll=false --ci"
   },
   "dependencies": {
-    "jest-sonar": "^0.2.16",
     "next": "15.0.0",
     "next-intl": "^3.26.3",
     "react": "^18",
@@ -70,15 +69,6 @@
     ],
     "*.json": [
       "prettier --write"
-    ]
-  },
-  "jest": {
-    "reporters": [
-      "default",
-      [
-        "jest-sonar-reporter",
-        {}
-      ]
     ]
   }
 }

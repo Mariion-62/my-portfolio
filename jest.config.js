@@ -15,16 +15,6 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/$1' // Permet les alias @/ pour simplifier les imports
   },
   testEnvironment: 'jest-environment-jsdom', // Utiliser l'environnement jsdom
-  reporters: [
-    'default',
-    [
-      'jest-sonar',
-      {
-        outputDirectory: 'coverage',
-        outputName: 'sonar-report.xml'
-      }
-    ]
-  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}', // Inclure tous les fichiers de code source
