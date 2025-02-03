@@ -15,16 +15,6 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/$1' // Permet les alias @/ pour simplifier les imports
   },
   testEnvironment: 'jest-environment-jsdom', // Utiliser l'environnement jsdom
-  reporters: [
-    'default',
-    [
-      'jest-sonar-reporter',
-      {
-        outputDirectory: 'coverage',
-        outputName: 'test-report.xml'
-      }
-    ]
-  ],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}', // Inclure tous les fichiers de code source
@@ -32,8 +22,7 @@ const customJestConfig = {
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
   coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text'],
-  testResultsProcessor: 'jest-sonar-reporter'
+  coverageReporters: ['lcov', 'text']
 }
 
 export default createJestConfig(customJestConfig)

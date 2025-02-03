@@ -13,7 +13,6 @@ const mockData: CardParcoursProps = {
   expTwo: 'Additional experience 1',
   expThree: 'Additional experience 2',
   expFour: 'Additional experience 3',
-  expFive: 'Additional experience 4'
 }
 
 describe('CardParcours Component', () => {
@@ -27,7 +26,6 @@ describe('CardParcours Component', () => {
     expect(screen.getByText('Additional experience 1')).toBeInTheDocument()
     expect(screen.getByText('Additional experience 2')).toBeInTheDocument()
     expect(screen.getByText('Additional experience 3')).toBeInTheDocument()
-    expect(screen.getByText('Additional experience 4')).toBeInTheDocument()
   })
 
   it('renders the component without optional props', () => {
