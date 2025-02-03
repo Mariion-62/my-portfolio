@@ -33,7 +33,12 @@ jobs:
 
       # Run tests (si tu as des tests)
       - name: Run tests
-        run: pnpm test:cov
+        run:
+          pnpm test:cov
+
+          # Définir la variable SHELL explicitement
+      - name: Set SHELL environment variable
+        run: echo "SHELL=/bin/bash" >> $GITHUB_ENV
 
       # Configurer le répertoire global de pnpm
       - name: Configure pnpm global bin directory
