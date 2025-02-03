@@ -35,6 +35,10 @@ jobs:
       - name: Run tests
         run: pnpm test:cov
 
+      # Configurer le répertoire global de pnpm
+      - name: Configure pnpm global bin directory
+        run: pnpm setup
+
         # Installer SonarScanner
       - name: Install SonarScanner
         run: pnpm add -g sonarqube-scanner
