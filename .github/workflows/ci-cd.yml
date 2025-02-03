@@ -34,34 +34,7 @@ jobs:
       # Run tests (si tu as des tests)
       - name: Run tests
         run:
-          pnpm test:cov
-
-          # Définir la variable SHELL explicitement
-      - name: Set SHELL environment variable
-        run: echo "SHELL=/bin/bash" >> $GITHUB_ENV
-
-      # Configurer le répertoire global de pnpm
-      - name: Configure pnpm global bin directory
-        run: pnpm setup
-
-        # Installer SonarScanner
-      - name: Install SonarScanner
-        run: pnpm add -g sonarqube-scanner
-
-        # Exécuter l'analyse SonarQube
-      - name: Run SonarScanner
-        env:
-          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-        run: |
-          sonar-scanner \
-            -Dsonar.projectKey=my-portfolio \
-            -Dsonar.organization=mariion-dev \
-            -Dsonar.sources=src \
-            -Dsonar.language=js \
-            -Dsonar.sourceEncoding=UTF-8 \
-            -Dsonar.tests=src \
-            -Dsonar.test.inclusions="**/*.spec.js,**/*.test.js" \
-            -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info \
+          pnpm test:cov      
 
       # Build the Next.js application
       - name: Build Next.js app
