@@ -35,6 +35,10 @@ jobs:
       - name: Run tests
         run: pnpm test:cov
 
+        # Installer SonarScanner
+      - name: Install SonarScanner
+        run: pnpm add -g sonarqube-scanner
+
         # Exécuter l'analyse SonarQube
       - name: Run SonarScanner
         env:
