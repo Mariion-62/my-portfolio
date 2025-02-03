@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testExecutions version="1">
   <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardParcours/cardParcours.spec.tsx">
-    <testCase name="CardParcours Component renders the component with all props" duration="100"/>
-    <testCase name="CardParcours Component renders the component without optional props" duration="22"/>
-  </file>
-  <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardRealisation/cardRealisation.spec.tsx">
-    <testCase name="CardRealisation Component renders the title" duration="231"/>
-  </file>
-  <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardHalloween/cardHalloween.spec.tsx">
-    <testCase name="CardHalloween should render component CardHallowen correctly" duration="157"/>
-    <testCase name="CardHalloween should render answer when user click on button answer" duration="111"/>
+    <testCase name="CardParcours Component renders the component with all props" duration="84"/>
+    <testCase name="CardParcours Component renders the component without optional props" duration="23"/>
   </file>
   <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardHomepage/cardHomepage.spec.tsx">
-    <testCase name="CardHomepage should render component CardHomepage correctly" duration="205"/>
-    <testCase name="CardHomepage should good page when user click on link careers" duration="79"/>
-    <testCase name="CardHomepage should good page when user click on link project" duration="45"/>
+    <testCase name="CardHomepage should render component CardHomepage correctly" duration="153"/>
+    <testCase name="CardHomepage should good page when user click on link careers" duration="105"/>
+    <testCase name="CardHomepage should good page when user click on link project" duration="44"/>
+  </file>
+  <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardHalloween/cardHalloween.spec.tsx">
+    <testCase name="CardHalloween should render component CardHallowen correctly" duration="152"/>
+    <testCase name="CardHalloween should render answer when user click on button answer" duration="134"/>
+  </file>
+  <file path="/home/marion/Code-Sources/projectsPerso/my-portfolio/src/components/CardRealisation/cardRealisation.spec.tsx">
+    <testCase name="CardRealisation Component renders the title" duration="257"/>
   </file>
 </testExecutions>
