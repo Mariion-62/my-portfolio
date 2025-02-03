@@ -71,5 +71,14 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "jest": {
+    "reporters": [
+      "default",
+      [
+        "jest-sonar-reporter",
+        {}
+      ]
+    ]
   }
 }
