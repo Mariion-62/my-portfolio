@@ -14,9 +14,7 @@ function Description(): ReactElement {
   return (
     <div className={styles.containerDescription}>
       <p className={styles.contentDescription}>
-        Je m’appelle Marion, j’ai {age} ans, je suis pacsée. Je suis curieuse, autonome, investie, dynamique. J’aime
-        voyager, jouer au jeux vidéo, aux jeux de société, aller en concert, en festival mais aussi me poser devant une
-        série, lire un bouquin ou écouter de la musique. J’ai travaillé pendant 10 ans dans le domaine du sport adapté.
+        Je m’appelle Marion, j’ai {age} ans. J’ai travaillé pendant 10 ans dans le domaine du sport adapté.
         J’ai décidé de faire une reconversion dans le domaine de l’IT pour me donner un nouveau challenge et m&apos;
         épanouir en tant que développeuse.
       </p>
