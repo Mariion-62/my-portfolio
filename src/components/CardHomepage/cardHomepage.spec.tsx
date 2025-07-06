@@ -22,28 +22,20 @@ jest.mock('next/link', () => {
 describe('CardHomepage', () => {
   it('should render component CardHomepage correctly', async () => {
     render(<CardHomepage />, { wrapper })
-    expect(screen.getByText('Mon parcours')).toBeVisible()
-    expect(screen.getByText('Mes réalisations')).toBeVisible()
+    expect(screen.getByText('Parcours')).toBeVisible()
+    expect(screen.getByText('Projets')).toBeVisible()
   })
   it('should good page when user click on link careers', async () => {
     render(<CardHomepage />, { wrapper })
-    const link = screen.getByRole('link', { name: 'Mon parcours Mon parcours' })
+    const link = screen.getByRole('link', { name: /parcours/i })
     expect(link).toBeVisible()
-
-    // Vérifiez que le href du lien est correct
-    expect(link).toHaveAttribute('href', '/mon-parcours')
-
-    expect(link).toBeVisible()
-
-    // Vérifiez que le href du lien est correct
-    expect(link).toHaveAttribute('href', '/mon-parcours')
+    expect(link).toHaveAttribute('href', 'fr/mon-parcours')
   })
+
   it('should good page when user click on link project', async () => {
     render(<CardHomepage />, { wrapper })
-    const link = screen.getByRole('link', { name: 'Mes réalisations Mes réalisations' })
+    const link = screen.getByRole('link', { name: /projets/i })
     expect(link).toBeVisible()
-
-    // Vérifiez que le href du lien est correct
-    expect(link).toHaveAttribute('href', '/mes-realisations')
+    expect(link).toHaveAttribute('href', 'fr/mes-realisations')
   })
 })

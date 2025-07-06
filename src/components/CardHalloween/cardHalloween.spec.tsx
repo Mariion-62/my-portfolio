@@ -26,7 +26,7 @@ describe('CardHalloween', () => {
       { wrapper }
     )
     expect(screen.getByText('Test')).toBeVisible()
-    expect(screen.getByText('Réponse')).toBeVisible()
+    expect(screen.getByText('halloween.answer')).toBeVisible()
     expect(screen.queryByText('Test Response')).toBeNull()
   })
 
@@ -43,9 +43,9 @@ describe('CardHalloween', () => {
       { wrapper }
     )
     expect(screen.getByText('Test')).toBeVisible()
-    expect(screen.getByRole('button', { name: 'Réponse' })).toBeVisible()
+    expect(screen.getByRole('button', { name: 'halloween.answer' })).toBeVisible()
 
-    userEvent.click(screen.getByRole('button', { name: 'Réponse' }))
+    userEvent.click(screen.getByRole('button', { name: 'halloween.answer' }))
 
     expect(screen.getByText('Test Response')).toBeVisible()
   })

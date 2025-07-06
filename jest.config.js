@@ -6,7 +6,7 @@ const createJestConfig = nextJest({
 })
 
 const customJestConfig = {
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'], // Fichier de configuration supplémentaire
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'], // Fichier de configuration supplémentaire
   moduleNameMapper: {
     // Gérer les styles et les fichiers statiques
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
@@ -15,6 +15,7 @@ const customJestConfig = {
     '^@/(.*)$': '<rootDir>/$1' // Permet les alias @/ pour simplifier les imports
   },
   testEnvironment: 'jest-environment-jsdom', // Utiliser l'environnement jsdom
+  transformIgnorePatterns: ['node_modules/(?!(next-intl|use-intl)/)'],
   collectCoverage: true,
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}', // Inclure tous les fichiers de code source

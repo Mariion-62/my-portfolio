@@ -1,9 +1,9 @@
 import '@testing-library/jest-dom'
-import { RenderOptions, RenderResult, render } from '@testing-library/react'
-import userEvent, { UserEvent } from '@testing-library/user-event'
+import { render } from '@testing-library/react'
+import userEvent from '@testing-library/user-event'
 import React from 'react'
 
-export function setup(jsx: React.ReactNode, args: RenderOptions): RenderResult & { user: UserEvent } {
+export function setup(jsx, args) {
   return {
     user: userEvent.setup(),
     ...render(jsx, args)
@@ -13,19 +13,13 @@ export function setup(jsx: React.ReactNode, args: RenderOptions): RenderResult &
 // Mock global pour next/image
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ src, alt, ...props }: { src: string; alt: string; [key: string]: any }) => (
-    <img src={src} alt={alt} {...props} />
-  )
+  default: ({ src, alt, ...props }) => React.createElement('img', { src, alt, ...props })
 }))
 
 // Mock global pour next/link
 jest.mock('next/link', () => ({
   __esModule: true,
-  default: ({ href, children, ...props }: { href: string; children: React.ReactNode; [key: string]: any }) => (
-    <a href={href} {...props}>
-      {children}
-    </a>
-  )
+  default: ({ href, children, ...props }) => React.createElement('a', { href, ...props }, children)
 }))
 
 // Mock global pour next/navigation
@@ -45,8 +39,8 @@ jest.mock('next/navigation', () => ({
 
 // Mock global pour next-intl
 jest.mock('next-intl', () => ({
-  useTranslations: jest.fn(() => (key: string, params?: any) => {
-    const defaultTranslations: Record<string, string> = {
+  useTranslations: jest.fn(() => (key, params) => {
+    const defaultTranslations = {
       'navigation.home': 'Accueil',
       'navigation.careers': 'Parcours',
       'navigation.project': 'Projets',
@@ -60,34 +54,28 @@ jest.mock('next-intl', () => ({
     return defaultTranslations[key] || key
   }),
   useLocale: jest.fn(() => 'fr'),
-  NextIntlClientProvider: ({ children }: { children: React.ReactNode }) => (
-    <div data-testid="intl-provider">{children}</div>
-  )
+  NextIntlClientProvider: ({ children }) => React.createElement('div', { 'data-testid': 'intl-provider' }, children)
 }))
 
 // Mock global pour react-icons
 jest.mock('react-icons/io5', () => ({
-  IoMailOutline: ({ size }: { size: number }) => (
-    <svg data-testid="mail-icon" width={size} height={size}>
-      <title>Mail Icon</title>
-    </svg>
-  )
+  IoMailOutline: ({ size }) =>
+    React.createElement(
+      'svg',
+      { 'data-testid': 'mail-icon', width: size, height: size },
+      React.createElement('title', null, 'Mail Icon')
+    )
 }))
 
 // Configuration globale pour les tests
 beforeEach(() => {
   // Reset des mocks pour chaque test
   jest.clearAllMocks()
-  
+
   // Configuration par défaut de window.innerWidth
   Object.defineProperty(window, 'innerWidth', {
     writable: true,
     configurable: true,
     value: 1024
   })
-})
-
-// Nettoyage après chaque test
-afterEach(() => {
-  jest.clearAllTimers()
 })
