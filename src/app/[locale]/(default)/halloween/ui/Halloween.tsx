@@ -1,11 +1,11 @@
 'use client'
 
 import { useTranslations } from 'next-intl'
-import React, { useState } from 'react'
-import CardHalloween from '@/src/components/CardHalloween/CardHalloween'
+import React, { ReactElement, useState } from 'react'
 import styles from './halloween.module.scss'
+import { CardHalloween } from '@/src/components/CardHalloween/CardHalloween'
 
-export default function Halloween() {
+export default function Halloween(): ReactElement {
   const t = useTranslations()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnswerVisible, setIsAnswerVisible] = useState(false)

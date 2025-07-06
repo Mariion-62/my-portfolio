@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="8" failures="0" errors="0" time="3.13">
+  <testsuite name="CardParcours Component" errors="0" failures="0" skipped="0" timestamp="2025-02-03T21:39:47" time="1.427" tests="2">
+    <testcase classname="CardParcours Component renders the component with all props" name="CardParcours Component renders the component with all props" time="0.084">
+    </testcase>
+    <testcase classname="CardParcours Component renders the component without optional props" name="CardParcours Component renders the component without optional props" time="0.023">
+    </testcase>
+  </testsuite>
+  <testsuite name="CardHomepage" errors="0" failures="0" skipped="0" timestamp="2025-02-03T21:39:47" time="1.586" tests="3">
+    <testcase classname="CardHomepage should render component CardHomepage correctly" name="CardHomepage should render component CardHomepage correctly" time="0.153">
+    </testcase>
+    <testcase classname="CardHomepage should good page when user click on link careers" name="CardHomepage should good page when user click on link careers" time="0.105">
+    </testcase>
+    <testcase classname="CardHomepage should good page when user click on link project" name="CardHomepage should good page when user click on link project" time="0.044">
+    </testcase>
+  </testsuite>
+  <testsuite name="CardHalloween" errors="0" failures="0" skipped="0" timestamp="2025-02-03T21:39:47" time="1.599" tests="2">
+    <testcase classname="CardHalloween should render component CardHallowen correctly" name="CardHalloween should render component CardHallowen correctly" time="0.152">
+    </testcase>
+    <testcase classname="CardHalloween should render answer when user click on button answer" name="CardHalloween should render answer when user click on button answer" time="0.134">
+    </testcase>
+  </testsuite>
+  <testsuite name="CardRealisation Component" errors="0" failures="0" skipped="0" timestamp="2025-02-03T21:39:47" time="1.602" tests="1">
+    <testcase classname="CardRealisation Component renders the title" name="CardRealisation Component renders the title" time="0.257">
+    </testcase>
+  </testsuite>
+</testsuites>

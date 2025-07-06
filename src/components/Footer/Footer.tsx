@@ -1,8 +1,9 @@
 import { useTranslations } from 'next-intl'
+import { ReactElement } from 'react'
 import { IoMailOutline } from 'react-icons/io5'
 import styles from './footer.module.scss'
 
-function Footer() {
+function Footer(): ReactElement {
   const currentYear = new Date().getFullYear()
   const t = useTranslations()
   return (

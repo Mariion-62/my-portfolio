@@ -1,0 +1,18 @@
+{
+  "navigation": {
+    "home": "Home",
+    "project": "My Projects",
+    "careers": "My Career"
+  },
+  "exp_careers": {
+    "title_exp": "Professional Experience"
+  },
+  "error": {
+    "error_404": "Error 404",
+    "error_404_message": "Oops... This page doesn't exist"
+  },
+  "footer": {
+    "legal_notice": "Legal Notices",
+    "copyright": "Copyright {currentYear}"
+  }
+}
