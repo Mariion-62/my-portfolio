@@ -1,4 +1,5 @@
 import { useTranslations } from 'next-intl'
+import { ReactElement } from 'react'
 import styles from '../CardHalloween/cardHalloween.module.scss'
 
 export interface CardHalloweenProps {
@@ -8,13 +9,13 @@ export interface CardHalloweenProps {
   isAswerVisible: boolean
   onAnswerClick: () => void
 }
-export default function CardHalloween({
+export function CardHalloween({
   title,
   answer,
   linkMusic,
   isAswerVisible,
   onAnswerClick
-}: Readonly<CardHalloweenProps>) {
+}: CardHalloweenProps): ReactElement {
   const t = useTranslations()
 
   return (

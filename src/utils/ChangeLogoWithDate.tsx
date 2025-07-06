@@ -1,7 +1,7 @@
 import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
 
-function ChangeLogoWithDate() {
+function ChangeLogoWithDate(): ReactElement {
   const [, setDate] = useState(new Date())
   const [logo, setLogo] = useState('/logo.png')
 
@@ -34,7 +34,7 @@ function ChangeLogoWithDate() {
 
   return (
     <div>
-      <Image src={logo} alt="logo" width={130} height={130} />
+      <Image priority src={logo} alt="logo" width={130} height={130} />
     </div>
   )
 }

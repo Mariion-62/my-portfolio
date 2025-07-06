@@ -1,36 +1,128 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio 🚀
 
-## Getting Started
+Bienvenue sur le dépôt de mon portfolio personnel. Ce projet présente mes compétences, mes projets et mon expérience professionnelle en tant que développeur.
 
-First, run the development server:
+## Table des matières 📓
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- [Aperçu](#aperçu)
+- [Fonctionnalités](#fonctionnalités)
+- [Technologies utilisées](#technologies-utilisées)
+- [Installation](#installation)
+- [Utilisation](#utilisation)
+- [Outils et bonnes pratiques](#outils-et-bonnes-pratiques)
+- [Commandes globales](#commandes-globales)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Aperçu 🌐
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Ce portfolio est une application web développée avec Next.js qui met en avant mes projets récents, mon parcours professionnel et mes compétences techniques.
 
-## Learn More
+## Fonctionnalités ✨
 
-To learn more about Next.js, take a look at the following resources:
+- 📝 Présentation de mes projets avec des descriptions détaillées et des liens vers les dépôts correspondants.
+- 👨‍💻 Section sur mon expérience professionnelle et mes compétences.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Technologies utilisées 🛠️
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+- [Next.js](https://nextjs.org/) - Framework React pour le rendu côté serveur et la génération de sites statiques.
+- [React](https://reactjs.org/) - Bibliothèque JavaScript pour construire des interfaces utilisateur.
+- [TypeScript](https://www.typescriptlang.org/) - Sur-ensemble typé de JavaScript.
 
-## Deploy on Vercel
+## Installation ⚙️
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Pour exécuter ce projet en local, assurez-vous d'avoir Node.js installé, puis clonez ce dépôt et installez les dépendances :
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+    git clone https://github.com/Mariion-62/my-portfolio.git
+    cd my-portfolio
+    pnpm install
+
+## Utilisation ▶️
+
+Lancer l'application en mode développement :
+
+    pnpm run dev
+
+Ouvrez votre navigateur et accédez à http://localhost:3000 pour voir le résultat.
+
+## Outils et bonnes pratiques 🛡️
+
+### ESLint 🔍
+
+ESLint est utilisé pour analyser statiquement le code et garantir un style cohérent tout en évitant les erreurs.
+
+Commandes disponibles :
+
+Vérifier les erreurs ESLint :
+
+    pnpm run lint
+
+Le fichier de configuration ESLint se trouve dans .eslintrc.json. Vous pouvez personnaliser les règles si nécessaire.
+
+### Prettier ✨
+
+Prettier est utilisé pour formater automatiquement le code afin de respecter un style uniforme.
+
+Formater le code :
+
+    pnpm run format
+
+Prettier fonctionne en complément d'ESLint grâce au plugin eslint-plugin-prettier. Les règles de configuration sont définies dans .prettierrc.
+
+### Commitlint 📜
+
+Commitlint garantit que vos messages de commit respectent une convention spécifique (par exemple, Conventional Commits).
+
+Règles suivies :Les messages de commit doivent respecter le format suivant :
+
+type(scope): description
+
+Exemples :
+
+feat(ui): ajout d'un nouveau composant
+fix(auth): correction d'un bug d'authentification
+
+Configuration et utilisation :
+
+Les règles sont définies dans le fichier commitlint.config.js.
+
+Les hooks Git sont configurés avec Husky pour vérifier les messages de commit avant qu'ils ne soient ajoutés :
+
+    npx husky install
+
+### Jest 🧪
+
+Jest est utilisé pour les tests unitaires et d'intégration dans le projet.
+
+Commandes disponibles :
+
+Lancer les tests :
+
+    pnpm run test
+
+Lancer les tests avec couverture :
+
+    pnpm run test:cov
+
+Les fichiers de test ont l'extension .spec.tsx.
+
+### SonarQube 🛠️
+
+SonarQube est utilisé pour l'analyse statique du code, la détection des bugs, et la vérification de la qualité du code.
+
+Analyser le code :
+
+    sonar-scanner
+
+## Commandes globales 🌟
+
+Voici un résumé des principales commandes disponibles :
+
+| Commande               | Description                                   |
+|------------------------|-----------------------------------------------|
+| `npm run lint`         | 🔍 Vérifie les erreurs ESLint                   |
+| `npm run lint:fix`     | 🔧 Corrige les erreurs ESLint                   |
+| `npm run format`       | ✨ Formate le code avec Prettier                |
+| `npm run test`         | 🧪 Exécute les tests avec Jest                  |
+| `npm run test:coverage`| 📊 Exécute les tests et génère un rapport de couverture |
+| `sonar-scanner`        | 🛠️ Analyse le code avec SonarQube               |
+

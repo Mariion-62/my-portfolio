@@ -1,6 +1,6 @@
-import { PropsWithChildren } from 'react'
+import { PropsWithChildren, ReactNode } from 'react'
 
-const RootLayout = ({ children }: PropsWithChildren) => {
+const RootLayout = ({ children }: PropsWithChildren): ReactNode => {
   return children
 }
 

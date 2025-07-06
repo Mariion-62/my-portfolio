@@ -1,16 +1,16 @@
 'use client'
 
-import { useEffect, useState } from 'react'
+import { ReactElement, useEffect, useState } from 'react'
+import styles from './realisation.module.scss'
 import {
   CardRealisation,
   CardRealisationProps,
   dataRealisation
 } from '@/src/components/CardRealisation/CardRealisation'
-import styles from './realisation.module.scss'
 
 export type DataRealisationType = CardRealisationProps
 
-function Realisations() {
+function Realisations(): ReactElement {
   const [cardRealisations, setCardRealisations] = useState<DataRealisationType[]>([])
   useEffect(() => {
     const dataRealisationCopy: CardRealisationProps[] = [...dataRealisation]

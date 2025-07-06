@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { ReactElement } from 'react'
 import styles from './cardParcours.module.scss'
 export const dataParcours = [
   {
@@ -83,7 +84,7 @@ export interface CardParcoursProps {
   dateEnd: string
   job: string
   experience?: string
-  picture: string
+  picture?: string
   enterprise: string
   expTwo?: string
   expThree?: string
@@ -91,7 +92,7 @@ export interface CardParcoursProps {
   expFive?: string
 }
 
-export function CardParcours({
+function CardParcours({
   id,
   dateBegin,
   dateEnd,
@@ -103,7 +104,7 @@ export function CardParcours({
   expThree,
   expFour,
   expFive
-}: Readonly<CardParcoursProps>) {
+}: CardParcoursProps): ReactElement {
   return (
     <div className={styles.cardParcours}>
       <h3 className={styles.dateParcours}>
@@ -118,9 +119,14 @@ export function CardParcours({
         <li className={styles.listParcours}>{expFour}</li>
         <li className={styles.listParcours}>{expFive}</li>
       </ul>
-      <div className={styles.logoParcours}>
-        <Image className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
-      </div>
+      {picture ? (
+        <div key={id} className={styles.logoParcours}>
+          <Image priority className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
+        </div>
+      ) : (
+        <div className={styles.logoParcours}>{enterprise}</div>
+      )}
     </div>
   )
 }
+export { CardParcours }
