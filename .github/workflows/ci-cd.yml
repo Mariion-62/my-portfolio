@@ -13,34 +13,33 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # Check out the codebase
       - name: Checkout repository
         uses: actions/checkout@v3
 
-      # Set up Node.js (par exemple version 18)
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      # Installer pnpm
       - name: Install pnpm
         run: npm install -g pnpm
 
-      # Install dependencies
       - name: Install dependencies
         run: pnpm install
 
-      # Run tests (si tu as des tests)
       - name: Run tests
-        run:
-          pnpm test:cov      
+        run: pnpm test:cov
 
-      # Build the Next.js application
       - name: Build Next.js app
         run: pnpm run build
 
-      # Déploiement sur Netlify
+      # 👉 Ajouter SonarCloud
+      - name: SonarCloud Scan
+        uses: SonarSource/sonarcloud-github-action@master
+        with:
+          args: >
+            -Dsonar.login=${{ secrets.PORT_SONARQUBE }}
+
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
         env:
