@@ -33,12 +33,10 @@ jobs:
       - name: Build Next.js app
         run: pnpm run build
 
-      # 👉 Ajouter SonarCloud
       - name: SonarCloud Scan
-        uses: SonarSource/sonarcloud-github-action@master
-        with:
-          args: >
-            -Dsonar.login=${{ secrets.PORT_SONARQUBE }}
+        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        env:
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
