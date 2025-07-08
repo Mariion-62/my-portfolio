@@ -20,6 +20,7 @@ const customJestConfig = {
   collectCoverageFrom: [
     'src/**/*.{js,jsx,ts,tsx}', // Inclure tous les fichiers de code source
     '!src/**/*.d.ts', // Exclure les fichiers de définition TypeScript
+    '!src/**/*.{spec,test}.{js,jsx,ts,tsx}', // Exclure les fichiers de test
     '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
   ],
   coverageDirectory: 'coverage',
