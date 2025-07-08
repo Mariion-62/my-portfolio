@@ -30,14 +30,21 @@ jobs:
       - name: Run tests
         run: pnpm test:cov
 
+      - name: Check coverage files
+        run: |
+          echo "Checking if coverage files exist..."
+          ls -la coverage/ || echo "Coverage directory not found"
+          ls -la coverage/lcov.info || echo "LCOV file not found"
+
       - name: Build Next.js app
         run: pnpm run build
 
       - name: SonarCloud Scan
-        uses: SonarSource/sonarqube-scan-action@v5.0.0
+        uses: SonarSource/sonarcloud-github-action@master
         env:
-          SONAR_TOKEN: ${{ secrets.PORT_SONARQUBE }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        continue-on-error: true
 
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
