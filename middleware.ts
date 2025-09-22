@@ -1,5 +1,5 @@
 import createMiddleware from 'next-intl/middleware'
-import { locales, defaultLocale } from './i18n.config.js'
+import { locales, defaultLocale } from './i18n'
 
 export default createMiddleware({
   // Utiliser les locales depuis notre fichier de configuration unifié

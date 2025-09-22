@@ -21,9 +21,9 @@ export default async function LocaleLayout(props: Props) {
   const { children, params } = props
   const { locale } = await params // ✅ await params avant d'accéder à ses propriétés
 
-  const { locales } = await import('../../../i18n.config.js')
+  const { locales } = await import('../../../i18n')
 
-  if (!locale || !locales.includes(locale)) {
+  if (!locale || !locales.includes(locale as any)) {
     notFound()
   }
 
