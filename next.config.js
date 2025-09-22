@@ -12,6 +12,9 @@ const withNextIntl = createNextIntlPlugin('./next-intl.config.mjs')
 const nextConfig = {
   output: 'export',
   trailingSlash: true,
+  images: {
+    unoptimized: true
+  },
   outputFileTracingRoot: __dirname,
   sassOptions: {
     includePaths: ['./node_modules'],
