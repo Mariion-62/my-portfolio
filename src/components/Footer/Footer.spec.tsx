@@ -33,7 +33,7 @@ describe('Footer', () => {
         rich: jest.fn((key: string) => mockT(key)),
         markup: jest.fn((key: string) => mockT(key)),
         raw: jest.fn((key: string) => mockT(key)),
-        has: jest.fn((key: string) => true)
+        has: jest.fn((_key: string) => true)
       })
     )
   })
