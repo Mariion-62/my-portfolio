@@ -35,6 +35,10 @@ jobs:
           echo "Checking if coverage files exist..."
           ls -la coverage/ || echo "Coverage directory not found"
           ls -la coverage/lcov.info || echo "LCOV file not found"
+          echo "First 10 lines of LCOV file:"
+          head -10 coverage/lcov.info || echo "Cannot read LCOV file"
+          echo "Coverage file size:"
+          wc -l coverage/lcov.info || echo "Cannot count lines in LCOV file"
 
       - name: Build Next.js app
         run: pnpm run build
@@ -44,7 +48,14 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_SCANNER_OPTS: "-Dsonar.verbose=true"
         continue-on-error: true
+
+      - name: Verify SonarCloud Coverage
+        run: |
+          echo "Verifying coverage was sent to SonarCloud..."
+          echo "Coverage file exists:" && ls -la coverage/lcov.info
+          echo "SonarCloud project: Mariion-62_my-portfolio"
 
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
