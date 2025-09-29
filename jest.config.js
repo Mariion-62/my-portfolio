@@ -12,7 +12,7 @@ const customJestConfig = {
     '^.+\\.module\\.(css|sass|scss)$': 'identity-obj-proxy',
     '^.+\\.(css|sass|scss)$': '<rootDir>/__mocks__/styleMock.js',
     '^.+\\.(png|jpg|jpeg|gif|svg|ico|webp|avif|ttf|woff|woff2)$': '<rootDir>/__mocks__/fileMock.js',
-    '^@/(.*)$': '<rootDir>/src/$1' // Permet les alias @/ pour simplifier les imports
+    '^@/(.*)$': '<rootDir>/$1' // Permet les alias @/ pour simplifier les imports
   },
   testEnvironment: 'jest-environment-jsdom', // Utiliser l'environnement jsdom
   transformIgnorePatterns: ['node_modules/(?!(next-intl|use-intl)/)'],
