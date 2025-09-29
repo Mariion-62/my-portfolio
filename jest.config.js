@@ -26,7 +26,7 @@ const customJestConfig = {
     '!src/**/*.stories.{js,jsx,ts,tsx}' // Exclure Storybook si vous l'utilisez
   ],
   coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text', 'html', 'json-summary'],
+  coverageReporters: ['lcov', 'text', 'html', 'json-summary', 'clover'],
   coverageThreshold: {
     global: {
       branches: 80,

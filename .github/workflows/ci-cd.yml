@@ -27,45 +27,48 @@ jobs:
       - name: Install dependencies
         run: pnpm install
 
-      - name: Run tests
+      - name: Run tests with coverage
         run: pnpm test:cov
 
-      - name: Check coverage files
+      - name: Check coverage files before SonarCloud
         run: |
-          echo "Checking if coverage files exist..."
-          ls -la coverage/ || echo "Coverage directory not found"
-          ls -la coverage/lcov.info || echo "LCOV file not found"
-          echo "First 10 lines of LCOV file:"
-          head -10 coverage/lcov.info || echo "Cannot read LCOV file"
-          echo "Coverage file size:"
-          wc -l coverage/lcov.info || echo "Cannot count lines in LCOV file"
+          echo "=== Pre-SonarCloud Coverage Check ==="
+          echo "Coverage directory:"
+          ls -la coverage/ || echo "❌ Coverage directory not found"
+          echo "LCOV file:"
+          ls -la coverage/lcov.info || echo "❌ LCOV file not found"
+          if [ -f coverage/lcov.info ]; then
+            echo "✅ LCOV file exists - $(wc -l < coverage/lcov.info) lines"
+            echo "LCOV sample:"
+            head -5 coverage/lcov.info
+          fi
 
-      - name: Build Next.js app
-        run: pnpm run build
-
-      - name: SonarCloud Scan
+      - name: SonarCloud Scan (before build to preserve coverage)
         uses: SonarSource/sonarqube-scan-action@884b79409bbd464b2a59edc326a4b77dc56b2195 # v5.0.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_SCANNER_OPTS: '-Dsonar.verbose=true'
+          SONAR_SCANNER_OPTS: '-Dsonar.verbose=true -Dsonar.coverage.debug=true'
         continue-on-error: true
 
-      - name: Debug Coverage for SonarCloud
+      - name: Build Next.js app
+        run: pnpm run build
+
+      - name: Post-SonarCloud Coverage Verification
         run: |
-          echo "=== Coverage Debug Information ==="
+          echo "=== Post-SonarCloud Verification ==="
           echo "Working directory: $(pwd)"
-          echo "Coverage directory contents:"
-          ls -la coverage/ || echo "Coverage directory not found"
-          echo "LCOV file details:"
-          ls -la coverage/lcov.info || echo "LCOV file not found"
-          echo "LCOV file content sample:"
-          head -20 coverage/lcov.info || echo "Cannot read LCOV file"
-          echo "LCOV file line count:"
-          wc -l coverage/lcov.info || echo "Cannot count LCOV lines"
-          echo "=== SonarCloud Configuration ==="
-          echo "Checking sonar-project.properties:"
-          grep -E "lcov|coverage" sonar-project.properties || echo "No coverage config found"
+          if [ -f coverage/lcov.info ]; then
+            echo "✅ LCOV file still exists after SonarCloud scan"
+            echo "File size: $(stat -c%s coverage/lcov.info) bytes"
+            echo "Line count: $(wc -l < coverage/lcov.info)"
+            echo "First few lines:"
+            head -3 coverage/lcov.info
+          else
+            echo "❌ LCOV file missing after SonarCloud scan"
+          fi
+          echo "SonarCloud config used:"
+          grep -E "lcov|coverage" sonar-project.properties
 
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
