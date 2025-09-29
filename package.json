@@ -11,7 +11,7 @@
     "prepare": "husky install",
     "format": "prettier --write .",
     "test": "jest --watch",
-    "test:cov": "jest --coverage --reporters=default --watchAll=false --ci",
+    "test:cov": "jest --coverage --watchAll=false --ci",
     "semantic-release": "semantic-release"
   },
   "dependencies": {
