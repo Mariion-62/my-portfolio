@@ -48,14 +48,24 @@ jobs:
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SONAR_SCANNER_OPTS: "-Dsonar.verbose=true"
+          SONAR_SCANNER_OPTS: '-Dsonar.verbose=true'
         continue-on-error: true
 
-      - name: Verify SonarCloud Coverage
+      - name: Debug Coverage for SonarCloud
         run: |
-          echo "Verifying coverage was sent to SonarCloud..."
-          echo "Coverage file exists:" && ls -la coverage/lcov.info
-          echo "SonarCloud project: Mariion-62_my-portfolio"
+          echo "=== Coverage Debug Information ==="
+          echo "Working directory: $(pwd)"
+          echo "Coverage directory contents:"
+          ls -la coverage/ || echo "Coverage directory not found"
+          echo "LCOV file details:"
+          ls -la coverage/lcov.info || echo "LCOV file not found"
+          echo "LCOV file content sample:"
+          head -20 coverage/lcov.info || echo "Cannot read LCOV file"
+          echo "LCOV file line count:"
+          wc -l coverage/lcov.info || echo "Cannot count LCOV lines"
+          echo "=== SonarCloud Configuration ==="
+          echo "Checking sonar-project.properties:"
+          grep -E "lcov|coverage" sonar-project.properties || echo "No coverage config found"
 
       - name: Deploy to Netlify
         if: github.ref == 'refs/heads/main' && success()
