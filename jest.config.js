@@ -21,10 +21,20 @@ const customJestConfig = {
     'src/**/*.{js,jsx,ts,tsx}', // Inclure tous les fichiers de code source
     '!src/**/*.d.ts', // Exclure les fichiers de définition TypeScript
     '!src/**/*.{spec,test}.{js,jsx,ts,tsx}', // Exclure les fichiers de test
-    '!src/**/index.{js,ts}' // Exclure les fichiers d'index si nécessaire
+    '!src/**/index.{js,ts}', // Exclure les fichiers d'index si nécessaire
+    '!src/**/*.config.{js,ts}', // Exclure les fichiers de configuration
+    '!src/**/*.stories.{js,jsx,ts,tsx}' // Exclure Storybook si vous l'utilisez
   ],
   coverageDirectory: 'coverage',
-  coverageReporters: ['lcov', 'text']
+  coverageReporters: ['lcov', 'text', 'html', 'json-summary'],
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  }
 }
 
 export default createJestConfig(customJestConfig)
