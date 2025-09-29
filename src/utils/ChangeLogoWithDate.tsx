@@ -34,7 +34,7 @@ function ChangeLogoWithDate(): ReactElement {
 
   return (
     <div>
-      <Image priority src={logo} alt="logo" width={130} height={130} />
+      <Image src={logo} alt="logo" width={130} height={130} />
     </div>
   )
 }

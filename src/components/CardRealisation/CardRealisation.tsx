@@ -32,20 +32,20 @@ function CardRealisation({
       <h2 className={styles.titleProject}>{title} </h2>
       <div className={styles.groupTime}>
         <div className={styles.groupProject}>
-          <p>
+          <span>
             <IoPeopleSharp size={25} />
-          </p>
-          <p className={styles.contentGroup}>: {group}</p>
+          </span>
+          <span className={styles.contentGroup}>: {group}</span>
         </div>
         <div className={styles.timeProject}>
-          <p>
+          <span>
             <IoTimeSharp size={25} />
-          </p>
-          <p className={styles.contentTime}> : {time}</p>
+          </span>
+          <span className={styles.contentTime}> : {time}</span>
         </div>
       </div>
       <a className={styles.linkSite} href={linkSite} target="_blank" rel="noreferrer">
-        <Image priority className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
+        <Image className={styles.imgProject} src={picture} alt={title} width={400} height={200} />
       </a>
       {problematique && <p className={styles.problematiqueProject}>Problématique : {problematique}</p>}
       <p className={styles.contentProject}>{content}</p>

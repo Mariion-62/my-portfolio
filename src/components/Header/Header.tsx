@@ -31,7 +31,7 @@ function Header(): ReactElement {
             />
           </a>
           <a href="https://github.com/Mariion-62">
-            <Image priority src={'/logoGitHub.png'} alt="Github" className={styles.logoGitHub} width={60} height={60} />
+            <Image src={'/logoGitHub.png'} alt="Github" className={styles.logoGitHub} width={60} height={60} />
           </a>
         </div>
       </div>

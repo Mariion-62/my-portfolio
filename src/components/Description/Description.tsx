@@ -19,8 +19,8 @@ function Description(): ReactElement {
         épanouir en tant que développeuse.
       </p>
       <div className={styles.img}>
-        <Image priority className={styles.avatar} src={avatar} alt="avatar Marion" width={300} height={300} />
-        <Image priority className={styles.iconeOrdi} src={ordi} alt="icone ordi" width={600} height={600} />
+        <Image className={styles.avatar} src={avatar} alt="avatar Marion" width={300} height={300} />
+        <Image className={styles.iconeOrdi} src={ordi} alt="icone ordi" width={600} height={600} />
       </div>
     </div>
   )

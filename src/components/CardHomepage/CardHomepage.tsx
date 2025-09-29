@@ -14,13 +14,13 @@ function CardHomepage(): ReactElement {
     <section className={styles.allCards}>
       <div className={styles.card}>
         <Link id="parcours" className={styles.link} href={`${locale}/mon-parcours`} role="link">
-          <Image priority className={styles.imgCardHomepage} src={bgPurple} alt={t('navigation.careers')} />
+          <Image className={styles.imgCardHomepage} src={bgPurple} alt={t('navigation.careers')} />
           <h2 className={styles.titleCardHomepage}>{t('navigation.careers')}</h2>
         </Link>
       </div>
       <div className={styles.card}>
         <Link id="realisations" className={styles.link} href={`${locale}/mes-realisations`} role="link">
-          <Image priority className={styles.imgCardHomepage} src={bgPink} alt={t('navigation.project')} />
+          <Image className={styles.imgCardHomepage} src={bgPink} alt={t('navigation.project')} />
           <h2 className={styles.titleCardHomepage}>{t('navigation.project')}</h2>
         </Link>
       </div>

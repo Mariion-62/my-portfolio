@@ -121,7 +121,7 @@ function CardParcours({
       </ul>
       {picture ? (
         <div key={id} className={styles.logoParcours}>
-          <Image priority className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
+          <Image className={styles.pictureParcours} src={picture} alt={enterprise} width={100} height={100} />
         </div>
       ) : (
         <div className={styles.logoParcours}>{enterprise}</div>
