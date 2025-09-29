@@ -1,3 +1,8 @@
+## <small>1.0.2 (2025-09-29)</small>
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([a50ba90](https://github.com/Mariion-62/my-portfolio/commit/a50ba90))
+* fix: update SonarCloud scan action version and enhance coverage exclusions in configuration files ([a21f435](https://github.com/Mariion-62/my-portfolio/commit/a21f435))
+
 ## <small>1.0.1 (2025-09-29)</small>
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([6b0ed52](https://github.com/Mariion-62/my-portfolio/commit/6b0ed52))
