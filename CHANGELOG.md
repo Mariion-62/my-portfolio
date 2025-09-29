@@ -1,3 +1,9 @@
+## <small>1.0.6 (2025-09-29)</small>
+
+* fix: correct module alias path in Jest configuration ([832887e](https://github.com/Mariion-62/my-portfolio/commit/832887e))
+* fix: update Jest configuration for improved coverage reporting and adjust SonarCloud settings ([19d8288](https://github.com/Mariion-62/my-portfolio/commit/19d8288))
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([9178183](https://github.com/Mariion-62/my-portfolio/commit/9178183))
+
 ## <small>1.0.5 (2025-09-29)</small>
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([5759ab2](https://github.com/Mariion-62/my-portfolio/commit/5759ab2))
