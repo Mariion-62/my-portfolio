@@ -1,3 +1,8 @@
+## <small>1.0.1 (2025-09-29)</small>
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([6b0ed52](https://github.com/Mariion-62/my-portfolio/commit/6b0ed52))
+* fix: update semantic-release configuration to include pnpm-lock.yaml in git assets ([61eb3c8](https://github.com/Mariion-62/my-portfolio/commit/61eb3c8))
+
 ## 1.0.0 (2025-09-29)
 
 * fix: add 404 page and middleware ([dedc357](https://github.com/Mariion-62/my-portfolio/commit/dedc357))
