@@ -1,3 +1,8 @@
+## <small>1.0.3 (2025-09-29)</small>
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([2d5a455](https://github.com/Mariion-62/my-portfolio/commit/2d5a455))
+* fix: enhance SonarCloud coverage verification and logging in CI/CD workflow ([c893b71](https://github.com/Mariion-62/my-portfolio/commit/c893b71))
+
 ## <small>1.0.2 (2025-09-29)</small>
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([a50ba90](https://github.com/Mariion-62/my-portfolio/commit/a50ba90))
