@@ -1,3 +1,9 @@
+## <small>1.0.7 (2025-10-04)</small>
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([32e1c9b](https://github.com/Mariion-62/my-portfolio/commit/32e1c9b))
+* fix: update mock implementations in tests to avoid eslint warnings ([a98870f](https://github.com/Mariion-62/my-portfolio/commit/a98870f))
+* fix: update SonarCloud settings and improve test coverage by refining Jest mocks and component rende ([1bfa5db](https://github.com/Mariion-62/my-portfolio/commit/1bfa5db))
+
 ## <small>1.0.6 (2025-09-29)</small>
 
 * fix: correct module alias path in Jest configuration ([832887e](https://github.com/Mariion-62/my-portfolio/commit/832887e))
