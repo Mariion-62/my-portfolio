@@ -12,7 +12,7 @@ function ChangeLogoWithDate(): ReactElement {
       const day = now.getDate()
       let logoSrc = '/logo.png'
 
-      if (month === 9 && day >= 15 && day <= 31) {
+      if (month === 9 && day >= 1 && day <= 31) {
         // Halloween: October 15th to 31st
         logoSrc = '/logo_halloween.png'
       } else if (month === 11 && day >= 1 && day <= 31) {
