@@ -4,8 +4,7 @@ import ChangeLogoWithDate from './ChangeLogoWithDate'
 // Mock des dépendances
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ src, alt, priority, ...props }: { src: string; alt: string; priority?: boolean; [key: string]: any }) => {
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+  default: ({ src, alt, priority: _priority, ...props }: { src: string; alt: string; priority?: boolean; [key: string]: any }) => {
     return <img src={src} alt={alt} {...props} />
   }
 }))

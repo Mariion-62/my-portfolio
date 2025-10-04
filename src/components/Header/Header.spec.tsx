@@ -4,8 +4,7 @@ import { Header } from './Header'
 // Mock de next/image
 jest.mock('next/image', () => ({
   __esModule: true,
-  default: ({ priority, ...props }: any) => {
-    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+  default: ({ priority: _priority, ...props }: any) => {
     return <img {...props} />
   }
 }))

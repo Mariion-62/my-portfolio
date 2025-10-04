@@ -6,6 +6,9 @@ const parser = await import('@typescript-eslint/parser')
 
 export default [
   {
+    ignores: ['node_modules/**', '.next/**', 'build/**', 'coverage/**', 'out/**'] // Exclusion des répertoires
+  },
+  {
     files: ['**/*.ts', '**/*.tsx', '**/*.js', '**/*.jsx'], // Target the necessary files
     languageOptions: {
       ecmaVersion: 2021, // ES2021
@@ -22,7 +25,6 @@ export default [
         console: 'readonly'
       }
     },
-    ignores: ['node_modules/**', '.next/**', 'build/**'], // Exclusion des répertoires
     plugins: {
       react: reactPlugin,
       '@typescript-eslint': typescriptPlugin,
