@@ -1,3 +1,8 @@
+## <small>1.0.8 (2025-10-04)</small>
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([c0ee748](https://github.com/Mariion-62/my-portfolio/commit/c0ee748))
+* fix: update sonar-project.properties to refine test analysis and exclusions ([3b448fa](https://github.com/Mariion-62/my-portfolio/commit/3b448fa))
+
 ## <small>1.0.7 (2025-10-04)</small>
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([32e1c9b](https://github.com/Mariion-62/my-portfolio/commit/32e1c9b))
