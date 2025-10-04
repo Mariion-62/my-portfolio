@@ -1,6 +1,15 @@
 import { render, screen } from '@testing-library/react'
 import { Header } from './Header'
 
+// Mock de next/image
+jest.mock('next/image', () => ({
+  __esModule: true,
+  default: ({ priority, ...props }: any) => {
+    // eslint-disable-next-line @next/next/no-img-element, jsx-a11y/alt-text
+    return <img {...props} />
+  }
+}))
+
 // Mock des composants spécifiques
 jest.mock('../MenuBurger/MenuBurger', () => ({
   MenuBurger: () => <div data-testid="menu-burger">Menu Burger</div>
