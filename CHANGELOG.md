@@ -1,3 +1,10 @@
+## <small>1.0.9 (2025-10-04)</small>
+
+* fix: correct Halloween logo date range to include October 1st to 31st ([21ba976](https://github.com/Mariion-62/my-portfolio/commit/21ba976))
+* fix: update Halloween logo date range to include October 1st to 31st ([152f00a](https://github.com/Mariion-62/my-portfolio/commit/152f00a))
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([11c1526](https://github.com/Mariion-62/my-portfolio/commit/11c1526))
+* test: add MenuBurger component tests with localization support ([bf2e3e1](https://github.com/Mariion-62/my-portfolio/commit/bf2e3e1))
+
 ## <small>1.0.8 (2025-10-04)</small>
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([c0ee748](https://github.com/Mariion-62/my-portfolio/commit/c0ee748))
