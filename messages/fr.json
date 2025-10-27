@@ -15,7 +15,84 @@
     "copyright": "Copyright {currentYear}",
     "legal_notice": "mentions légales"
   },
+  "legalNotice": {
+    "title": "Mentions Légales",
+    "lastUpdate": "Dernière mise à jour : Janvier 2025",
+    "editor": {
+      "title": "1. Éditeur du site",
+      "name": "Nom et Prénom :",
+      "address": "Adresse :",
+      "email": "Email :",
+      "siteType": "Type de site :",
+      "siteTypeValue": "Portfolio personnel - Site non commercial"
+    },
+    "hosting": {
+      "title": "2. Hébergement",
+      "provider": "Hébergeur :",
+      "address": "Adresse :",
+      "website": "Site web :"
+    },
+    "intellectualProperty": {
+      "title": "3. Propriété intellectuelle",
+      "content": "L'ensemble du contenu de ce site (textes, images, code source, design) est la propriété exclusive de l'éditeur, sauf mention contraire explicite.",
+      "copyright": "Toute reproduction, distribution, modification ou utilisation des contenus sans autorisation préalable est strictement interdite et peut faire l'objet de poursuites."
+    },
+    "musicCredits": {
+      "title": "4. Crédits musicaux - Page Halloween",
+      "intro": "Les extraits musicaux utilisés sur la page 'This is Halloween' sont des œuvres protégées par le droit d'auteur et appartiennent à leurs ayants droit respectifs. Ils sont utilisés à des fins pédagogiques, de divertissement et de promotion culturelle :",
+      "addamsFamily": "La Famille Addams - Thème composé par Vic Mizzy",
+      "americanHorrorStory": "American Horror Story - Thème par Cesar Davila-Irizarry et Charlie Clouser",
+      "coraline": "Coraline - Musique de Bruno Coulais",
+      "corpseBride": "Les Noces Funèbres - Musique de Danny Elfman",
+      "scoobyDoo": "Scooby-Doo - Thème par David Mook et Ben Raleigh",
+      "exorcist": "L'Exorciste - Tubular Bells par Mike Oldfield",
+      "ghostbusters": "SOS Fantômes - Thème de Ray Parker Jr.",
+      "jaws": "Les Dents de la Mer - Thème de John Williams",
+      "lionKing": "Le Roi Lion - 'Soyez Prêtes' par Elton John et Tim Rice",
+      "ratched": "Ratched - Musique de Mac Quayle",
+      "buffy": "Buffy contre les vampires - Thème par Nerf Herder",
+      "scream": "Scream - Musique de Marco Beltrami",
+      "strangerThings": "Stranger Things - Thème par Kyle Dixon et Michael Stein",
+      "littleMermaid": "La Petite Sirène - 'Pauvres âmes en perdition' par Alan Menken et Howard Ashman",
+      "thriller": "Thriller - Michael Jackson",
+      "walkingDead": "The Walking Dead - Thème de Bear McCreary",
+      "saw": "Saw - 'Hello Zepp' par Charlie Clouser",
+      "charmed": "Charmed - Thème par Love Spit Love",
+      "dexter": "Dexter - Thème par Rolfe Kent",
+      "thisIsHalloween": "This is Halloween - L'Étrange Noël de Monsieur Jack, musique de Danny Elfman",
+      "fairUse": "Ces extraits sont utilisés dans un cadre d'utilisation équitable (fair use) à des fins éducatives et non commerciales. En cas de demande de retrait par les ayants droit, les contenus concernés seront immédiatement supprimés."
+    },
+    "privacy": {
+      "title": "5. Protection des données personnelles (RGPD)",
+      "dataCollection": {
+        "title": "Collecte de données",
+        "content": "Ce site ne collecte actuellement aucune donnée personnelle. Aucun formulaire de contact n'est présent. Le seul moyen de communication est via l'adresse email affichée publiquement."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "Ce site n'utilise actuellement aucun cookie de suivi ou d'analyse. Seuls les cookies techniques strictement nécessaires au fonctionnement du site peuvent être utilisés."
+      },
+      "rights": {
+        "title": "Vos droits",
+        "content": "Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification, de suppression et de portabilité de vos données. Pour exercer ces droits, contactez-nous par email."
+      }
+    },
+    "liability": {
+      "title": "6. Limitation de responsabilité",
+      "content": "L'éditeur s'efforce de maintenir les informations du site à jour et exactes, mais ne peut garantir l'exactitude, la précision ou l'exhaustivité des informations. L'éditeur ne pourra être tenu responsable des erreurs, omissions, ou résultats obtenus de l'utilisation de ces informations."
+    },
+    "externalLinks": {
+      "title": "7. Liens externes",
+      "content": "Ce site peut contenir des liens vers des sites externes. L'éditeur n'a aucun contrôle sur le contenu de ces sites et décline toute responsabilité quant à leur contenu ou leurs pratiques."
+    },
+    "applicableLaw": {
+      "title": "8. Droit applicable",
+      "content": "Les présentes mentions légales sont régies par le droit français. Tout litige relatif à l'utilisation de ce site sera soumis à la compétence exclusive des tribunaux français."
+    }
+  },
   "halloween": {
+    "credits_notice": "Les extraits musicaux sont utilisés à des fins éducatives et non commerciales. Voir les",
+    "credits_link": "crédits complets",
     "music": {
       "adams_family": "La famille Addams",
       "american_horror_story": "American Horror Story",
