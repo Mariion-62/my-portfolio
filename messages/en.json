@@ -15,7 +15,84 @@
     "legal_notice": "Legal Notices",
     "copyright": "Copyright {currentYear}"
   },
+  "legalNotice": {
+    "title": "Legal Notices",
+    "lastUpdate": "Last update: January 2025",
+    "editor": {
+      "title": "1. Website Publisher",
+      "name": "Name:",
+      "address": "Address:",
+      "email": "Email:",
+      "siteType": "Website Type:",
+      "siteTypeValue": "Personal Portfolio - Non-commercial website"
+    },
+    "hosting": {
+      "title": "2. Web Hosting",
+      "provider": "Host:",
+      "address": "Address:",
+      "website": "Website:"
+    },
+    "intellectualProperty": {
+      "title": "3. Intellectual Property",
+      "content": "All content on this website (texts, images, source code, design) is the exclusive property of the publisher, unless explicitly stated otherwise.",
+      "copyright": "Any reproduction, distribution, modification, or use of content without prior authorization is strictly prohibited and may result in legal action."
+    },
+    "musicCredits": {
+      "title": "4. Music Credits - Halloween Page",
+      "intro": "The music excerpts used on the 'This is Halloween' page are copyrighted works belonging to their respective owners. They are used for educational, entertainment, and cultural promotion purposes:",
+      "addamsFamily": "The Addams Family - Theme composed by Vic Mizzy",
+      "americanHorrorStory": "American Horror Story - Theme by Cesar Davila-Irizarry and Charlie Clouser",
+      "coraline": "Coraline - Music by Bruno Coulais",
+      "corpseBride": "Corpse Bride - Music by Danny Elfman",
+      "scoobyDoo": "Scooby-Doo - Theme by David Mook and Ben Raleigh",
+      "exorcist": "The Exorcist - Tubular Bells by Mike Oldfield",
+      "ghostbusters": "Ghostbusters - Theme by Ray Parker Jr.",
+      "jaws": "Jaws - Theme by John Williams",
+      "lionKing": "The Lion King - 'Be Prepared' by Elton John and Tim Rice",
+      "ratched": "Ratched - Music by Mac Quayle",
+      "buffy": "Buffy the Vampire Slayer - Theme by Nerf Herder",
+      "scream": "Scream - Music by Marco Beltrami",
+      "strangerThings": "Stranger Things - Theme by Kyle Dixon and Michael Stein",
+      "littleMermaid": "The Little Mermaid - 'Poor Unfortunate Souls' by Alan Menken and Howard Ashman",
+      "thriller": "Thriller - Michael Jackson",
+      "walkingDead": "The Walking Dead - Theme by Bear McCreary",
+      "saw": "Saw - 'Hello Zepp' by Charlie Clouser",
+      "charmed": "Charmed - Theme by Love Spit Love",
+      "dexter": "Dexter - Theme by Rolfe Kent",
+      "thisIsHalloween": "This is Halloween - The Nightmare Before Christmas, music by Danny Elfman",
+      "fairUse": "These excerpts are used under fair use for educational and non-commercial purposes. Upon request from copyright holders, the relevant content will be immediately removed."
+    },
+    "privacy": {
+      "title": "5. Personal Data Protection (GDPR)",
+      "dataCollection": {
+        "title": "Data Collection",
+        "content": "This website currently does not collect any personal data. There is no contact form. The only means of communication is through the publicly displayed email address."
+      },
+      "cookies": {
+        "title": "Cookies",
+        "content": "This website currently does not use tracking or analytics cookies. Only technical cookies strictly necessary for the website's operation may be used."
+      },
+      "rights": {
+        "title": "Your Rights",
+        "content": "In accordance with the General Data Protection Regulation (GDPR), you have the right to access, rectify, delete, and port your data. To exercise these rights, contact us by email."
+      }
+    },
+    "liability": {
+      "title": "6. Limitation of Liability",
+      "content": "The publisher strives to keep the website information up-to-date and accurate but cannot guarantee the accuracy, precision, or completeness of the information. The publisher cannot be held responsible for errors, omissions, or results obtained from using this information."
+    },
+    "externalLinks": {
+      "title": "7. External Links",
+      "content": "This website may contain links to external sites. The publisher has no control over the content of these sites and disclaims all responsibility for their content or practices."
+    },
+    "applicableLaw": {
+      "title": "8. Applicable Law",
+      "content": "These legal notices are governed by French law. Any dispute relating to the use of this website will be subject to the exclusive jurisdiction of French courts."
+    }
+  },
   "halloween": {
+    "credits_notice": "Music excerpts are used for educational and non-commercial purposes. See",
+    "credits_link": "full credits",
     "music": {
       "adams_family": "The Addams Family",
       "american_horror_story": "American Horror Story",
