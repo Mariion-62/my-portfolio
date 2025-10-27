@@ -1,3 +1,9 @@
+## 1.1.0 (2025-10-27)
+
+* feat: add legal notices page (mentions-legales) and integrate into layout (#13) ([7f2a857](https://github.com/Mariion-62/my-portfolio/commit/7f2a857)), closes [#13](https://github.com/Mariion-62/my-portfolio/issues/13)
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([1073ffb](https://github.com/Mariion-62/my-portfolio/commit/1073ffb))
+* test: add MenuBurger component tests with localization support ([1ff9819](https://github.com/Mariion-62/my-portfolio/commit/1ff9819))
+
 ## <small>1.0.9 (2025-10-04)</small>
 
 * fix: correct Halloween logo date range to include October 1st to 31st ([21ba976](https://github.com/Mariion-62/my-portfolio/commit/21ba976))
