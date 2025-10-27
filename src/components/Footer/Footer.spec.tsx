@@ -4,7 +4,8 @@ import { Footer } from './Footer'
 
 // Mock des dépendances
 jest.mock('next-intl', () => ({
-  useTranslations: jest.fn()
+  useTranslations: jest.fn(),
+  useLocale: jest.fn(() => 'fr')
 }))
 
 jest.mock('react-icons/io5', () => ({

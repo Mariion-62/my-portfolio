@@ -4,7 +4,8 @@ import { Halloween } from './Halloween'
 
 // Mock des dépendances
 jest.mock('next-intl', () => ({
-  useTranslations: jest.fn()
+  useTranslations: jest.fn(),
+  useLocale: jest.fn(() => 'fr')
 }))
 
 jest.mock('@/src/components/CardHalloween/CardHalloween', () => ({

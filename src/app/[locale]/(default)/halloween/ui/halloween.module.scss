@@ -46,3 +46,28 @@
     }
   }
 }
+
+.credits_notice {
+  text-align: center;
+  margin: 2rem auto;
+  padding: 1rem;
+  max-width: 800px;
+  font-size: 1rem;
+  color: #990000;
+
+  p {
+    margin: 0;
+  }
+
+  .credits_link {
+    color: #d4d925;
+    text-decoration: underline;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ffffff;
+    }
+  }
+}

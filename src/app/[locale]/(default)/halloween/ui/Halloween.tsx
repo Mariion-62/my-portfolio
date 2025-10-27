@@ -1,12 +1,15 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import Link from 'next/link'
+import { useLocale, useTranslations } from 'next-intl'
 import React, { ReactElement, useState } from 'react'
 import styles from './halloween.module.scss'
 import { CardHalloween } from '@/src/components/CardHalloween/CardHalloween'
+import { Routes } from '@/types/routes'
 
 export default function Halloween(): ReactElement {
   const t = useTranslations()
+  const locale = useLocale()
   const [currentIndex, setCurrentIndex] = useState(0)
   const [isAnswerVisible, setIsAnswerVisible] = useState(false)
 
@@ -152,6 +155,14 @@ export default function Halloween(): ReactElement {
             {t('halloween.next_button')}
           </button>
         </div>
+      </div>
+      <div className={styles.credits_notice}>
+        <p>
+          {t('halloween.credits_notice')}{' '}
+          <Link href={`/${locale}${Routes.LEGAL_NOTICE}`} className={styles.credits_link}>
+            {t('halloween.credits_link')}
+          </Link>
+        </p>
       </div>
     </div>
   )

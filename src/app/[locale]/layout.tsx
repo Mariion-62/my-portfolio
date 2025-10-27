@@ -3,8 +3,7 @@ import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { ReactNode } from 'react'
 
-import { Footer } from '@/src/components/Footer/Footer'
-import { Header } from '@/src/components/Header/Header'
+import { LayoutContent } from '@/src/components/LayoutContent/LayoutContent'
 import './globals.scss'
 
 export const metadata: Metadata = {
@@ -38,9 +37,7 @@ export default async function LocaleLayout(props: Props) {
     <html lang={locale}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header />
-          {children}
-          <Footer />
+          <LayoutContent>{children}</LayoutContent>
         </NextIntlClientProvider>
       </body>
     </html>
