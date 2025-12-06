@@ -15,7 +15,7 @@
     "semantic-release": "semantic-release"
   },
   "dependencies": {
-    "next": "15.5.3",
+    "next": "15.5.7",
     "next-intl": "^4.3.9",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
@@ -42,7 +42,7 @@
     "babel-jest": "^29.7.0",
     "eslint": "^9.36.0",
     "eslint-config-google": "^0.14.0",
-    "eslint-config-next": "^15.5.3",
+    "eslint-config-next": "^15.5.7",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-import": "^2.32.0",
     "eslint-plugin-react": "^7.37.5",
@@ -74,5 +74,10 @@
     "*.json": [
       "prettier --write"
     ]
+  },
+  "pnpm": {
+    "overrides": {
+      "js-yaml": ">=4.1.1"
+    }
   }
 }
