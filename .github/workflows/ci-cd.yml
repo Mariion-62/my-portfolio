@@ -7,8 +7,58 @@ on:
   pull_request:
     branches:
       - main
+  schedule:
+    - cron: '0 9 * * 1'  # Tous les lundis à 9h UTC
 
 jobs:
+  security-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run security audit
+        id: audit
+        run: |
+          if pnpm audit --audit-level=high 2>&1 | tee audit-output.txt; then
+            echo "status=success" >> $GITHUB_OUTPUT
+            echo "message=✅ Aucune vulnérabilité détectée" >> $GITHUB_OUTPUT
+          else
+            echo "status=failure" >> $GITHUB_OUTPUT
+            VULN_COUNT=$(grep -oP '\d+ vulnerabilities' audit-output.txt | head -1 || echo "des vulnérabilités")
+            echo "message=⚠️ $VULN_COUNT trouvées sur my-portfolio" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Notify Discord on vulnerability
+        if: steps.audit.outputs.status == 'failure' && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\": \"${{ steps.audit.outputs.message }}\n\n🔗 Voir: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
+      - name: Notify Discord on success (scheduled only)
+        if: steps.audit.outputs.status == 'success' && github.event_name == 'schedule' && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d "{\"content\": \"${{ steps.audit.outputs.message }} sur my-portfolio 🎉\"}" \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
+      - name: Fail job if vulnerabilities found
+        if: steps.audit.outputs.status == 'failure'
+        run: exit 1
+
+
   build:
     runs-on: ubuntu-latest
 
