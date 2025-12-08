@@ -8,9 +8,79 @@ on:
     branches:
       - main
   schedule:
-    - cron: '0 9 * * 1'  # Tous les lundis à 9h UTC
+    - cron: '0 9 * * 1'  # Audit sécurité: tous les lundis à 9h UTC
+    - cron: '0 10 1 * *'  # Check packages: le 1er de chaque mois à 10h UTC
 
 jobs:
+  check-outdated:
+    runs-on: ubuntu-latest
+    if: github.event.schedule == '0 10 1 * *'
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install pnpm
+        run: npm install -g pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Check outdated packages
+        id: outdated
+        run: |
+          OUTPUT=$(pnpm outdated --format json 2>/dev/null || echo "{}")
+          if [ "$OUTPUT" = "{}" ] || [ -z "$OUTPUT" ]; then
+            echo "has_updates=false" >> $GITHUB_OUTPUT
+          else
+            COUNT=$(echo "$OUTPUT" | jq 'length')
+            echo "has_updates=true" >> $GITHUB_OUTPUT
+            echo "count=$COUNT" >> $GITHUB_OUTPUT
+            # Extraire les packages majeurs (breaking changes potentiels)
+            MAJOR=$(pnpm outdated 2>/dev/null | grep -E "^│" | head -20 || echo "Aucun")
+            echo "packages<<EOF" >> $GITHUB_OUTPUT
+            echo "$MAJOR" >> $GITHUB_OUTPUT
+            echo "EOF" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Notify Discord updates available
+        if: steps.outdated.outputs.has_updates == 'true' && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "📦 Mises à jour disponibles",
+                "description": "**${{ steps.outdated.outputs.count }}** packages ont des mises à jour sur **my-portfolio**",
+                "color": 15105570,
+                "fields": [
+                  {"name": "📋 Packages", "value": "```${{ steps.outdated.outputs.packages }}```", "inline": false},
+                  {"name": "💡 Action", "value": "Exécuter `pnpm outdated` pour voir les détails", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions - Check mensuel"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
+      - name: Notify Discord all up to date
+        if: steps.outdated.outputs.has_updates == 'false' && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "✨ Packages à jour",
+                "description": "Tous les packages sont à jour sur **my-portfolio**",
+                "color": 5763719,
+                "footer": {"text": "GitHub Actions - Check mensuel"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
   security-audit:
     runs-on: ubuntu-latest
     steps:
