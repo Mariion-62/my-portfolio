@@ -44,14 +44,53 @@ jobs:
         if: steps.audit.outputs.status == 'failure' && vars.DISCORD_WEBHOOK_URL != ''
         run: |
           curl -H "Content-Type: application/json" \
-            -d "{\"content\": \"${{ steps.audit.outputs.message }}\n\n🔗 Voir: https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}\"}" \
+            -d '{
+              "embeds": [{
+                "title": "🚨 Alerte Sécurité",
+                "description": "Des vulnérabilités ont été détectées sur **my-portfolio**",
+                "color": 15158332,
+                "fields": [
+                  {"name": "📦 Projet", "value": "my-portfolio", "inline": true},
+                  {"name": "🔍 Status", "value": "Vulnérabilités trouvées", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true},
+                  {"name": "💬 Commit", "value": "${{ github.event.head_commit.message || github.sha }}", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions Security Audit"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }],
+              "components": [{
+                "type": 1,
+                "components": [{
+                  "type": 2,
+                  "style": 5,
+                  "label": "Voir les détails",
+                  "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                }]
+              }]
+            }' \
             ${{ vars.DISCORD_WEBHOOK_URL }}
 
-      - name: Notify Discord on success (scheduled only)
-        if: steps.audit.outputs.status == 'success' && github.event_name == 'schedule' && vars.DISCORD_WEBHOOK_URL != ''
+      - name: Notify Discord on success
+        if: steps.audit.outputs.status == 'success' && vars.DISCORD_WEBHOOK_URL != ''
         run: |
           curl -H "Content-Type: application/json" \
-            -d "{\"content\": \"${{ steps.audit.outputs.message }} sur my-portfolio 🎉\"}" \
+            -d '{
+              "embeds": [{
+                "title": "🛡️ Audit Sécurité OK",
+                "description": "Aucune vulnérabilité détectée sur **my-portfolio**",
+                "color": 5763719,
+                "fields": [
+                  {"name": "📦 Projet", "value": "my-portfolio", "inline": true},
+                  {"name": "✅ Status", "value": "Tout est sécurisé", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true},
+                  {"name": "💬 Commit", "value": "${{ github.event.head_commit.message || github.sha }}", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions Security Audit"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
             ${{ vars.DISCORD_WEBHOOK_URL }}
 
       - name: Fail job if vulnerabilities found
@@ -65,6 +104,28 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Notify Discord build started
+        if: vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "🚀 Build démarré",
+                "description": "Le pipeline CI/CD a démarré pour **my-portfolio**",
+                "color": 3447003,
+                "fields": [
+                  {"name": "📦 Projet", "value": "my-portfolio", "inline": true},
+                  {"name": "🔄 Status", "value": "En cours...", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true},
+                  {"name": "💬 Commit", "value": "${{ github.event.head_commit.message || github.sha }}", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions CI/CD"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
 
       - name: Set up Node.js
         uses: actions/setup-node@v4
@@ -127,6 +188,59 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         run: |
           npx netlify-cli deploy --prod --dir=out --auth=$NETLIFY_AUTH_TOKEN --site=$NETLIFY_SITE_ID
+
+      - name: Notify Discord build success
+        if: success() && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "✅ Build réussi",
+                "description": "Le déploiement de **my-portfolio** est terminé avec succès !",
+                "color": 5763719,
+                "fields": [
+                  {"name": "📦 Projet", "value": "my-portfolio", "inline": true},
+                  {"name": "🎉 Status", "value": "Déployé", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true},
+                  {"name": "💬 Commit", "value": "${{ github.event.head_commit.message || github.sha }}", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions CI/CD"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
+      - name: Notify Discord build failed
+        if: failure() && vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "❌ Build échoué",
+                "description": "Le pipeline CI/CD a échoué pour **my-portfolio**",
+                "color": 15158332,
+                "fields": [
+                  {"name": "📦 Projet", "value": "my-portfolio", "inline": true},
+                  {"name": "💥 Status", "value": "Échec", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true},
+                  {"name": "💬 Commit", "value": "${{ github.event.head_commit.message || github.sha }}", "inline": false}
+                ],
+                "footer": {"text": "GitHub Actions CI/CD"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }],
+              "components": [{
+                "type": 1,
+                "components": [{
+                  "type": 2,
+                  "style": 5,
+                  "label": "Voir les logs",
+                  "url": "https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+                }]
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
 
   release:
     needs: build
