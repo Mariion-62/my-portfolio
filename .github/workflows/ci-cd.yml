@@ -312,8 +312,79 @@ jobs:
             }' \
             ${{ vars.DISCORD_WEBHOOK_URL }}
 
-  release:
+  lighthouse:
     needs: build
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main' && success()
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Run Lighthouse CI
+        id: lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          urls: |
+            https://marion-dev.fr
+          runs: 3
+          uploadArtifacts: true
+
+      - name: Extract Lighthouse scores
+        id: scores
+        run: |
+          # Extraire les scores du manifest
+          MANIFEST='${{ steps.lighthouse.outputs.manifest }}'
+          if [ -n "$MANIFEST" ]; then
+            PERF=$(echo '${{ steps.lighthouse.outputs.manifest }}' | jq -r '.[0].summary.performance // 0' | awk '{printf "%.0f", $1 * 100}')
+            A11Y=$(echo '${{ steps.lighthouse.outputs.manifest }}' | jq -r '.[0].summary.accessibility // 0' | awk '{printf "%.0f", $1 * 100}')
+            BP=$(echo '${{ steps.lighthouse.outputs.manifest }}' | jq -r '.[0].summary."best-practices" // 0' | awk '{printf "%.0f", $1 * 100}')
+            SEO=$(echo '${{ steps.lighthouse.outputs.manifest }}' | jq -r '.[0].summary.seo // 0' | awk '{printf "%.0f", $1 * 100}')
+          else
+            PERF=0; A11Y=0; BP=0; SEO=0
+          fi
+          echo "performance=$PERF" >> $GITHUB_OUTPUT
+          echo "accessibility=$A11Y" >> $GITHUB_OUTPUT
+          echo "best_practices=$BP" >> $GITHUB_OUTPUT
+          echo "seo=$SEO" >> $GITHUB_OUTPUT
+
+          # Déterminer la couleur selon le score moyen
+          AVG=$(( (PERF + A11Y + BP + SEO) / 4 ))
+          if [ $AVG -ge 90 ]; then
+            echo "color=5763719" >> $GITHUB_OUTPUT  # Vert
+            echo "emoji=🟢" >> $GITHUB_OUTPUT
+          elif [ $AVG -ge 50 ]; then
+            echo "color=15105570" >> $GITHUB_OUTPUT  # Orange
+            echo "emoji=🟠" >> $GITHUB_OUTPUT
+          else
+            echo "color=15158332" >> $GITHUB_OUTPUT  # Rouge
+            echo "emoji=🔴" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Notify Discord Lighthouse results
+        if: vars.DISCORD_WEBHOOK_URL != ''
+        run: |
+          curl -H "Content-Type: application/json" \
+            -d '{
+              "embeds": [{
+                "title": "🔦 Lighthouse Report",
+                "description": "${{ steps.scores.outputs.emoji }} Analyse de performance pour **marion-dev.fr**",
+                "color": ${{ steps.scores.outputs.color }},
+                "fields": [
+                  {"name": "⚡ Performance", "value": "${{ steps.scores.outputs.performance }}/100", "inline": true},
+                  {"name": "♿ Accessibilité", "value": "${{ steps.scores.outputs.accessibility }}/100", "inline": true},
+                  {"name": "✅ Bonnes pratiques", "value": "${{ steps.scores.outputs.best_practices }}/100", "inline": true},
+                  {"name": "🔍 SEO", "value": "${{ steps.scores.outputs.seo }}/100", "inline": true},
+                  {"name": "👤 Déclenché par", "value": "${{ github.actor }}", "inline": true},
+                  {"name": "🌿 Branche", "value": "${{ github.ref_name }}", "inline": true}
+                ],
+                "footer": {"text": "GitHub Actions - Lighthouse CI"},
+                "timestamp": "'$(date -u +%Y-%m-%dT%H:%M:%SZ)'"
+              }]
+            }' \
+            ${{ vars.DISCORD_WEBHOOK_URL }}
+
+  release:
+    needs: [build, lighthouse]
     runs-on: ubuntu-latest
     if: github.ref == 'refs/heads/main' && success()
     permissions:
