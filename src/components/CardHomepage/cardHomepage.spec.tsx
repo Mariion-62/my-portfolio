@@ -29,13 +29,13 @@ describe('CardHomepage', () => {
     render(<CardHomepage />, { wrapper })
     const link = screen.getByRole('link', { name: /parcours/i })
     expect(link).toBeVisible()
-    expect(link).toHaveAttribute('href', 'fr/mon-parcours')
+    expect(link).toHaveAttribute('href', '/fr/mon-parcours')
   })
 
   it('should good page when user click on link project', async () => {
     render(<CardHomepage />, { wrapper })
     const link = screen.getByRole('link', { name: /projets/i })
     expect(link).toBeVisible()
-    expect(link).toHaveAttribute('href', 'fr/mes-realisations')
+    expect(link).toHaveAttribute('href', '/fr/mes-realisations')
   })
 })
