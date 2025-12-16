@@ -1,3 +1,9 @@
+## 1.4.0 (2025-12-16)
+
+* feat: remove unused images and update link paths for localization ([77c0712](https://github.com/Mariion-62/my-portfolio/commit/77c0712))
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([f0046c1](https://github.com/Mariion-62/my-portfolio/commit/f0046c1))
+* Refactor code structure for improved readability and maintainability ([3c9b799](https://github.com/Mariion-62/my-portfolio/commit/3c9b799))
+
 ## 1.3.0 (2025-12-16)
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([6830dbb](https://github.com/Mariion-62/my-portfolio/commit/6830dbb))
