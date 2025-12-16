@@ -1,3 +1,8 @@
+## 1.3.0 (2025-12-16)
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([6830dbb](https://github.com/Mariion-62/my-portfolio/commit/6830dbb))
+* feat(accessibility): add jsx-a11y plugin and rules for improved accessibility ([ee49745](https://github.com/Mariion-62/my-portfolio/commit/ee49745))
+
 ## 1.2.0 (2025-12-16)
 
 * feat(analytics): add Google Analytics integration with cookie consent ([5e71b90](https://github.com/Mariion-62/my-portfolio/commit/5e71b90))
