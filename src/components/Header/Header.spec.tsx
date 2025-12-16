@@ -5,7 +5,7 @@ import { Header } from './Header'
 jest.mock('next/image', () => ({
   __esModule: true,
   default: ({ priority: _priority, ...props }: any) => {
-    return <img {...props} />
+    return <img alt="" {...props} />
   }
 }))
 

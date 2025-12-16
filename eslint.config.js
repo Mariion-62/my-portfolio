@@ -1,5 +1,6 @@
 import typescriptPlugin from '@typescript-eslint/eslint-plugin'
 import importPlugin from 'eslint-plugin-import'
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 import unusedImportsPlugin from 'eslint-plugin-unused-imports'
 const parser = await import('@typescript-eslint/parser')
@@ -29,7 +30,8 @@ export default [
       react: reactPlugin,
       '@typescript-eslint': typescriptPlugin,
       'unused-imports': unusedImportsPlugin,
-      import: importPlugin
+      import: importPlugin,
+      'jsx-a11y': jsxA11yPlugin
     },
     settings: {
       react: {
@@ -58,7 +60,25 @@ export default [
             caseInsensitive: true
           }
         }
-      ]
+      ],
+      // Règles d'accessibilité
+      'jsx-a11y/alt-text': 'error',
+      'jsx-a11y/anchor-has-content': 'error',
+      'jsx-a11y/anchor-is-valid': 'error',
+      'jsx-a11y/aria-props': 'error',
+      'jsx-a11y/aria-role': 'error',
+      'jsx-a11y/aria-unsupported-elements': 'error',
+      'jsx-a11y/click-events-have-key-events': 'warn',
+      'jsx-a11y/heading-has-content': 'error',
+      'jsx-a11y/html-has-lang': 'error',
+      'jsx-a11y/img-redundant-alt': 'error',
+      'jsx-a11y/interactive-supports-focus': 'warn',
+      'jsx-a11y/label-has-associated-control': 'error',
+      'jsx-a11y/no-autofocus': 'warn',
+      'jsx-a11y/no-redundant-roles': 'error',
+      'jsx-a11y/role-has-required-aria-props': 'error',
+      'jsx-a11y/role-supports-aria-props': 'error',
+      'jsx-a11y/tabindex-no-positive': 'error'
     }
   }
 ]
