@@ -8,7 +8,7 @@ export const dataParcours = [
     dateEnd: '2022',
     job: 'Conseillère Technique Fédérale',
     experience: 'Promouvoir le SA sur le territoire du Nord',
-    picture: '/Logo_CDSA59.png',
+    picture: '/Logo_CDSA59.webp',
     enterprise: 'CD Sport Adapté Nord',
     expTwo: 'Mise en place d’un calendrier sportif',
     expThree: 'Organisation d’événements sportifs (multisports)',
@@ -33,7 +33,7 @@ export const dataParcours = [
     dateEnd: '07/2022',
     job: 'Développeuse Front-End - React',
     experience: 'Front-end: React, CSS',
-    picture: '/Logo_SYB.png',
+    picture: '/Logo_SYB.webp',
     enterprise: 'Shake Your Business',
     expTwo: 'Outils: Styled-Components,Trello, GitHub',
     expThree: "Développement d'une onePage dynamique - Réalisation de tests unitaires"
@@ -45,7 +45,7 @@ export const dataParcours = [
     job: 'Développeuse Back-End - Node.JS',
     experience:
       "Développement de features (création d'API) - Réalisation de tests unitaires et tests d'intégration - Participation au comité projet",
-    picture: '/Logo_Repozen.png',
+    picture: '/Logo_Repozen.webp',
     enterprise: 'Repozen',
     expTwo: 'Back-end: Node.JS, Fastify, TypeScript',
     expThree: 'BDD: MongoDB',

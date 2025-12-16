@@ -71,7 +71,7 @@ export const dataRealisation = [
   {
     id: 1,
     title: 'Wild Green Project',
-    picture: '/wildGreenSchool.png',
+    picture: '/wildGreenSchool.webp',
     content:
       'Parmi toutes les thématiques proposées avec mon groupe nous avons choisi la Wild Green School - Pour une Wild Code School plus verte. Nous nous sommes répartis les tâches en binôme ou solo en fonction de la feature. La prise en main des outils notamment Git n’a pas été simple, mais avec l’entraide et l’écoute nous avons réussi à finaliser notre projet !',
     linkGithub: 'https://github.com/Mariion-62/Projet-1---Wild-Green-School-',
@@ -84,7 +84,7 @@ export const dataRealisation = [
   {
     id: 2,
     title: 'Wild Heroes',
-    picture: '/wildHeroes.png',
+    picture: '/wildHeroes.webp',
     content:
       "Nous sommes partis sur SuperHero API. Nous avons d’abord pensé au concept de notre webapp puis nous l'avons maquetté. Une fois la maquette validée par tous, nous avons créé un backlog afin d’avoir les features et se les répartir. Il y a eu des tâches plus ou moins simples à réaliser. Dès qu’il y avait quelqu’un de bloqué on l’aidait afin de résoudre le problème au plus vite.",
     linkGithub: 'https://github.com/Mariion-62/react-superHeros',
@@ -96,7 +96,7 @@ export const dataRealisation = [
   {
     id: 3,
     title: 'eQAI',
-    picture: '/eQAI.png',
+    picture: '/eQAI.webp',
     content:
       "Sur ce projet, j’avais pour rôle d’être le Product Owner. Une maquette et un backlog ont été créés et validés par les clients. Notre organisation : On se répartissait les tâches en fonction des compétences que l’on souhaitait développer (plus orienté front-end ou back-end). Toutes les semaines, nous faisions une présentation des avancées. En fonction des retours des clients, des modifications étaient à faire puis les features à développer sur le sprint suivant. Mon rôle (avec l’avis de mes collègues) était de valider ou non les demandes du client. Expliquer si c’était réalisable dans les temps, si nous avions la compétence pour etc… Nous avons tous bien progressé sur des axes où nous étions le moins à l’aise. Le fait de s’entraider a été très bénéfique pour moi. A l'issue des 7 semaines une présentation a été faite lors du Demo Day devant les collègues de formation, les formateurs ainsi que les autres clients.",
     linkGithub: 'https://github.com/Mariion-62/eQay-frontend',
@@ -110,7 +110,7 @@ export const dataRealisation = [
   {
     id: 4,
     title: 'Hackathon Music',
-    picture: '/hackathonMusic.png',
+    picture: '/hackathonMusic.webp',
     content:
       "Le thème du hackathon était la musique. Étant vers la période de Noël, nous avons décidé de faire un calendrier de l’avent musical. Les utilisateurs auront la possibilité d’écouter la musique mais également d'avoir les partitions afin de la jouer avec un instrument de musique disponible. D’avoir un temps limité pour réaliser cette app était très stimulant et enrichissant ! J’ai beaucoup aimé ce format !",
     linkGithub: 'https://github.com/Mariion-62/HackatonMusic',
@@ -122,7 +122,7 @@ export const dataRealisation = [
   {
     id: 5,
     title: 'Agence SYB',
-    picture: '/agenceSyb.png',
+    picture: '/agenceSyb.webp',
     content:
       "J'ai effectué mon stage au sein de l’Agence Syb pour une durée de 6 mois. une de mes missions a été de créer un site One Page fait en React.JS. Avant de commencer j’ai    configuré mon pc, installation de linux, de git, création d’un gitHub etc… J’ai dû faire pas mal de recherches pour réussir à faire des animations plus ou moins complexes. Ce projet m’a plu et m’a appris à être autonome, chercher, fouiller pour trouver des réponses à mes problèmes. J’ai également dû m’adapter et modifier mon code en fonction des retours sur le design.",
     linkGithub: 'https://github.com/Mariion-62/Agence-syb',
@@ -133,7 +133,7 @@ export const dataRealisation = [
   {
     id: 6,
     title: 'This Is Halloween',
-    picture: '/thisIsHalloween.png',
+    picture: '/thisIsHalloween.webp',
     content:
       "Création d'un blind test sur le thème d'Halloween. L'utilisateur doit deviner le titre de la chanson et/ou l'artiste. Si la réponse est bonne, il gagne des points. Si la réponse est fausse, il perd des points. Le but est d'obtenir le meilleur score possible.",
     linkSite: 'https://marion-dev.fr/fr/halloween',

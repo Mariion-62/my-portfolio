@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { ReactElement } from 'react';
-import avatar from './avatar.png';
+import avatar from './avatar.webp';
 import styles from './description.module.scss';
 import ordi from './ordi.png';
 

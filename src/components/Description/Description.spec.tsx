@@ -10,7 +10,7 @@ jest.mock('next/image', () => ({
 }))
 
 // Mock des images statiques
-jest.mock('./avatar.png', () => '/avatar.png')
+jest.mock('./avatar.webp', () => '/avatar.webp')
 jest.mock('./ordi.png', () => '/ordi.png')
 
 describe('Description', () => {

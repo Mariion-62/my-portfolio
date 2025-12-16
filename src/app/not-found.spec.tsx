@@ -24,7 +24,7 @@ describe('NotFound', () => {
 
     const errorImage = screen.getByAltText('404 Error')
     expect(errorImage).toBeInTheDocument()
-    expect(errorImage).toHaveAttribute('src', '/error_404.png')
+    expect(errorImage).toHaveAttribute('src', '/error_404.webp')
     expect(errorImage).toHaveAttribute('width', '400')
     expect(errorImage).toHaveAttribute('height', '400')
   })
