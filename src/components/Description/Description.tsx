@@ -1,11 +1,11 @@
-import Image from 'next/image'
-import { ReactElement } from 'react'
-import avatar from './avatar.png'
-import styles from './description.module.scss'
-import ordi from './ordi.png'
+import Image from 'next/image';
+import { ReactElement } from 'react';
+import avatar from './avatar.png';
+import styles from './description.module.scss';
+import ordi from './ordi.png';
 
 function Description(): ReactElement {
-  const birthDate = new Date(1990, 11, 27)
+  const birthDate = new Date(1990, 10, 27)
   const today = new Date()
   const diffInMilliseconds = today.getTime() - birthDate.getTime()
   const ageDate = new Date(diffInMilliseconds)
@@ -26,4 +26,4 @@ function Description(): ReactElement {
   )
 }
 
-export { Description }
+export { Description };

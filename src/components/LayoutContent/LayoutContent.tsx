@@ -3,6 +3,7 @@
 import { usePathname } from 'next/navigation'
 import { ReactElement, ReactNode } from 'react'
 import { Footer } from '@/src/components/Footer/Footer'
+import { GoogleAnalytics } from '@/src/components/GoogleAnalytics/GoogleAnalytics'
 import { Header } from '@/src/components/Header/Header'
 
 type Props = {
@@ -17,6 +18,7 @@ function LayoutContent({ children }: Props): ReactElement {
 
   return (
     <>
+      <GoogleAnalytics />
       <Header hideNavigation={isLegalPage} />
       {children}
       <Footer />
