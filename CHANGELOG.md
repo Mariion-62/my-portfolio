@@ -1,3 +1,18 @@
+## 1.2.0 (2025-12-16)
+
+* feat(analytics): add Google Analytics integration with cookie consent ([5e71b90](https://github.com/Mariion-62/my-portfolio/commit/5e71b90))
+* chore: re-run sonar analysis ([24a484d](https://github.com/Mariion-62/my-portfolio/commit/24a484d))
+* chore: re-run sonar analysis ([b13db1a](https://github.com/Mariion-62/my-portfolio/commit/b13db1a))
+* chore: re-run sonar analysis ([451d6f6](https://github.com/Mariion-62/my-portfolio/commit/451d6f6))
+* chore: test Discord notifications ([3c4e7a4](https://github.com/Mariion-62/my-portfolio/commit/3c4e7a4))
+* chore: update next and eslint-config-next to version 15.5.7; add js-yaml override ([f47cd59](https://github.com/Mariion-62/my-portfolio/commit/f47cd59))
+* chore(ci-cd): add Lighthouse CI with Discord notifications ([1a52d3d](https://github.com/Mariion-62/my-portfolio/commit/1a52d3d))
+* chore(ci-cd): add monthly outdated package check with Discord notifications ([d3c06df](https://github.com/Mariion-62/my-portfolio/commit/d3c06df))
+* chore(ci-cd): add security audit job with Discord notifications ([b866028](https://github.com/Mariion-62/my-portfolio/commit/b866028))
+* chore(ci-cd): enhance Discord notifications for security audit and build status ([99434c5](https://github.com/Mariion-62/my-portfolio/commit/99434c5))
+* chore(sonar): add CPD exclusions to sonar-project.properties to ignore tests and mocks ([e5df699](https://github.com/Mariion-62/my-portfolio/commit/e5df699))
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([6f79296](https://github.com/Mariion-62/my-portfolio/commit/6f79296))
+
 ## 1.1.0 (2025-10-27)
 
 * feat: add legal notices page (mentions-legales) and integrate into layout (#13) ([7f2a857](https://github.com/Mariion-62/my-portfolio/commit/7f2a857)), closes [#13](https://github.com/Mariion-62/my-portfolio/issues/13)
