@@ -1,3 +1,8 @@
+## 1.5.0 (2026-01-21)
+
+* fix: update copyright year in Footer tests to use current year dynamically ([421570e](https://github.com/Mariion-62/my-portfolio/commit/421570e))
+* feat: add .nvmrc file with Node.js version 22 ([7a1ef7f](https://github.com/Mariion-62/my-portfolio/commit/7a1ef7f))
+
 ## 1.4.0 (2025-12-16)
 
 * feat: remove unused images and update link paths for localization ([77c0712](https://github.com/Mariion-62/my-portfolio/commit/77c0712))
