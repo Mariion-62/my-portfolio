@@ -51,8 +51,9 @@ describe('Footer', () => {
 
   it('renders copyright with current year', () => {
     render(<Footer />)
+    const currentYear = new Date().getFullYear()
 
-    expect(screen.getByText(/copyright © 2025 marion grolleau/i)).toBeInTheDocument()
+    expect(screen.getByText(new RegExp(`copyright © ${currentYear} marion grolleau`, 'i'))).toBeInTheDocument()
   })
 
   it('renders email contact link', () => {
