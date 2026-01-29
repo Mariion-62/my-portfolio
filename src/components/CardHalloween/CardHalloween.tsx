@@ -23,7 +23,7 @@ export function CardHalloween({
       <div className={styles.card_halloween}>
         <div className={styles.container_audio}>
           <h2 className={styles.title}>{title}</h2>
-          <audio key={linkMusic} controls autoPlay={false}>
+          <audio key={linkMusic} controls autoPlay={false} preload="none">
             <source src={linkMusic} type="audio/mpeg" />
           </audio>
         </div>

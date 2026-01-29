@@ -9,6 +9,7 @@
   align-items: center;
   border-radius: 20px;
   box-shadow: -1px -3px 8px 4px var(--color-violet);
+  will-change: box-shadow;
   &:hover {
     box-shadow: -1px -3px 8px 4px var(--color-pink);
     .dateParcours,
@@ -28,15 +29,18 @@
   text-align: center;
   font-size: 1.5em;
   font-weight: bolder;
+  will-change: opacity;
 }
 .job {
   padding: 1vh;
   height: 5vh;
+  will-change: opacity;
 }
 .enterprise {
   padding: 1vh;
   font-style: italic;
   height: 3vh;
+  will-change: opacity;
 }
 .xpParcours {
   display: flex;
@@ -44,6 +48,7 @@
   opacity: 0;
   height: fit-content;
   margin-top: -12rem;
+  will-change: opacity;
   .listParcours {
     padding-bottom: 1rem;
     list-style: none;
@@ -55,6 +60,7 @@
   height: 6vh;
   align-items: center;
   object-fit: contain;
+  will-change: opacity;
 }
 
 // MODE MOBILE
