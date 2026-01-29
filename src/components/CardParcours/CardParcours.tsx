@@ -1,6 +1,6 @@
-import Image from 'next/image'
-import { ReactElement } from 'react'
-import styles from './cardParcours.module.scss'
+import Image from 'next/image';
+import { ReactElement } from 'react';
+import styles from './cardParcours.module.scss';
 export const dataParcours = [
   {
     id: 1,
@@ -69,7 +69,7 @@ export const dataParcours = [
     dateEnd: "Aujourd'hui",
     job: 'Développeuse Fullstack - Vue.js, Nest.js, TypeScript',
     experience:
-      "Développement de features pour un outil de gestion immobilière - Ajout de routes dans une API en Nest.js - Réalisation de tests unitaires et tests d'intégration",
+      "Développement de features pour un outil de gestion immobilière - Ajout de routes dans une API en Nest.js - Création de components en front - Migration d'une bdd firebase vers postgres - Création de documentations - Mise en place de bonnes pratiques - Réalisation de tests unitaires et tests d'intégration",
     picture: '',
     enterprise: 'QuickDev',
     expTwo: 'Front-end: Vue.js - TypeScript',
@@ -129,4 +129,4 @@ function CardParcours({
     </div>
   )
 }
-export { CardParcours }
+export { CardParcours };
