@@ -69,12 +69,13 @@ export const dataParcours = [
     dateEnd: "Aujourd'hui",
     job: 'Développeuse Fullstack - Vue.js, Nest.js, TypeScript',
     experience:
-      "Développement de features pour un outil de gestion immobilière - Ajout de routes dans une API en Nest.js - Création de components en front - Migration d'une bdd firebase vers postgres - Création de documentations - Mise en place de bonnes pratiques - Réalisation de tests unitaires et tests d'intégration",
+      "Développement de features pour un outil de gestion immobilière - Ajout de routes dans une API en Nest.js - Création de components en front - Migration d'une bdd Firebase vers MinIO - Création de documentations - Mise en place de bonnes pratiques - Réalisation de tests unitaires et tests d'intégration",
     picture: '',
     enterprise: 'QuickDev',
     expTwo: 'Front-end: Vue.js - TypeScript',
     expThree: 'Back-end: Nest.js - TypeScript',
-    expFour: 'Outils: Git, GitHub, Jest, Plane, Swagger/openAPI'
+    expFour: 'Outils: Git, GitHub, Jest, Plane, Swagger/openAPI',
+    expFive: 'BDD: Postgres, Firebase, Oracle'
   }
 ]
 
