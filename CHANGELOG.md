@@ -1,3 +1,9 @@
+## 1.9.0 (2026-01-29)
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([7342894](https://github.com/Mariion-62/my-portfolio/commit/7342894))
+* feat: enhance audio component with preload attribute and improve card hover effects ([1197aa2](https://github.com/Mariion-62/my-portfolio/commit/1197aa2))
+* feat: replace PNG images with WEBP format for improved performance and update references ([c6a49e9](https://github.com/Mariion-62/my-portfolio/commit/c6a49e9))
+
 ## 1.8.0 (2026-01-29)
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([08d7168](https://github.com/Mariion-62/my-portfolio/commit/08d7168))
