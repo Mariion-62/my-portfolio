@@ -1,3 +1,8 @@
+## 1.7.0 (2026-01-29)
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([c3b0c5b](https://github.com/Mariion-62/my-portfolio/commit/c3b0c5b))
+* feat: update job experience in CardParcours component to reflect database migration changes ([d61e002](https://github.com/Mariion-62/my-portfolio/commit/d61e002))
+
 ## 1.6.0 (2026-01-29)
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([07dcebb](https://github.com/Mariion-62/my-portfolio/commit/07dcebb))
