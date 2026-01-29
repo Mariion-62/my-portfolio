@@ -1,3 +1,8 @@
+## 1.8.0 (2026-01-29)
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([08d7168](https://github.com/Mariion-62/my-portfolio/commit/08d7168))
+* feat: update logo handling and replace deprecated images with webp format ([38f35fb](https://github.com/Mariion-62/my-portfolio/commit/38f35fb))
+
 ## 1.7.0 (2026-01-29)
 
 * Merge branch 'main' of github.com:Mariion-62/my-portfolio ([c3b0c5b](https://github.com/Mariion-62/my-portfolio/commit/c3b0c5b))
