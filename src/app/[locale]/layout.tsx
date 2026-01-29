@@ -1,10 +1,18 @@
 import type { Metadata } from 'next'
+import { Exo } from 'next/font/google'
 import { notFound } from 'next/navigation'
 import { NextIntlClientProvider } from 'next-intl'
 import { ReactNode } from 'react'
 
 import { LayoutContent } from '@/src/components/LayoutContent/LayoutContent'
 import './globals.scss'
+
+const exo = Exo({
+  subsets: ['latin'],
+  weight: ['400', '600', '700'],
+  display: 'swap',
+  variable: '--font-exo'
+})
 
 export const metadata: Metadata = {
   title: 'Marion Grolleau | Développeuse Web Full Stack',
@@ -44,15 +52,7 @@ export default async function LocaleLayout(props: Props) {
   }
 
   return (
-    <html lang={locale}>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Exo:wght@400;600;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
+    <html lang={locale} className={exo.className}>
       <body suppressHydrationWarning={true}>
         <NextIntlClientProvider locale={locale} messages={messages}>
           <LayoutContent>{children}</LayoutContent>

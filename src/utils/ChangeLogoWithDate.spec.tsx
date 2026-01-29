@@ -27,7 +27,7 @@ describe('ChangeLogoWithDate', () => {
 
     const logoImage = screen.getByAltText(/logo/i)
     expect(logoImage).toBeInTheDocument()
-    expect(logoImage).toHaveAttribute('src', '/logo.png')
+    expect(logoImage).toHaveAttribute('src', '/logo.webp')
     expect(logoImage).toHaveAttribute('width', '130')
     expect(logoImage).toHaveAttribute('height', '130')
   })
@@ -40,7 +40,7 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_halloween.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_halloween.webp')
   })
 
   it('renders Halloween logo on Halloween start date (October 15)', () => {
@@ -50,7 +50,7 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_halloween.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_halloween.webp')
   })
 
   it('renders Halloween logo on Halloween end date (October 31)', () => {
@@ -60,7 +60,7 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_halloween.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_halloween.webp')
   })
 
   it('renders Christmas logo during Christmas period', () => {
@@ -71,7 +71,7 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_noel.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_noel.webp')
   })
 
   it('renders Christmas logo on December 1st', () => {
@@ -81,7 +81,7 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_noel.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_noel.webp')
   })
 
   it('renders Christmas logo on December 31st', () => {
@@ -91,6 +91,6 @@ describe('ChangeLogoWithDate', () => {
     render(<ChangeLogoWithDate />)
 
     const logoImage = screen.getByAltText(/logo/i)
-    expect(logoImage).toHaveAttribute('src', '/logo_noel.png')
+    expect(logoImage).toHaveAttribute('src', '/logo_noel.webp')
   })
 })

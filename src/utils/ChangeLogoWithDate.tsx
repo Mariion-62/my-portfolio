@@ -1,36 +1,22 @@
 import Image from 'next/image'
-import { ReactElement, useEffect, useState } from 'react'
+import { ReactElement } from 'react'
+
+function getLogoForDate(): string {
+  const now = new Date()
+  const month = now.getMonth()
+
+  if (month === 9) {
+    // Halloween: October
+    return '/logo_halloween.webp'
+  } else if (month === 11) {
+    // Christmas: December
+    return '/logo_noel.webp'
+  }
+  return '/logo.webp'
+}
 
 function ChangeLogoWithDate(): ReactElement {
-  const [, setDate] = useState(new Date())
-  const [logo, setLogo] = useState('/logo.png')
-
-  useEffect(() => {
-    const updateLogo = () => {
-      const now = new Date()
-      const month = now.getMonth()
-      const day = now.getDate()
-      let logoSrc = '/logo.png'
-
-      if (month === 9 && day >= 1 && day <= 31) {
-        // Halloween: October 1st to 31st
-        logoSrc = '/logo_halloween.png'
-      } else if (month === 11 && day >= 1 && day <= 31) {
-        // Christmas: December 1st to 31st
-        logoSrc = '/logo_noel.png'
-      }
-
-      setLogo(logoSrc)
-    }
-
-    updateLogo()
-    const interval = setInterval(() => {
-      setDate(new Date())
-      updateLogo()
-    }, 1000)
-
-    return () => clearInterval(interval)
-  }, [])
+  const logo = getLogoForDate()
 
   return (
     <div>
