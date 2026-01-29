@@ -21,7 +21,7 @@ export const dataParcours = [
     dateEnd: '2022',
     job: 'Formation Développeur Web et Web Appli',
     experience: 'Front-end : JavaScript, ReactJS, HTML, CSS',
-    picture: '/Logo_WCS.png',
+    picture: '/Logo_WCS.webp',
     enterprise: 'Wild Code School',
     expTwo: 'Back-end : Node.JS, Express',
     expThree: 'BDD : MySQL Workbench',

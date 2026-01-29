@@ -30,14 +30,14 @@ function Header({ hideNavigation = false }: HeaderProps): ReactElement {
               <Image
                 priority
                 className={styles.logoLinkedIn}
-                src={'/logoLinkedIn.png'}
+                src={'/logoLinkedIn.webp'}
                 alt="LinkedIn"
                 width={60}
                 height={60}
               />
             </a>
             <a href="https://github.com/Mariion-62">
-              <Image src={'/logoGitHub.png'} alt="Github" className={styles.logoGitHub} width={60} height={60} />
+              <Image src={'/logoGitHub.webp'} alt="Github" className={styles.logoGitHub} width={60} height={60} />
             </a>
           </div>
         </div>

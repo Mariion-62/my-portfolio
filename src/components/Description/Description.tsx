@@ -2,7 +2,7 @@ import Image from 'next/image';
 import { ReactElement } from 'react';
 import avatar from './avatar.webp';
 import styles from './description.module.scss';
-import ordi from './ordi.png';
+import ordi from './ordi.webp';
 
 function Description(): ReactElement {
   const birthDate = new Date(1990, 10, 27)
