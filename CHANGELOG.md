@@ -1,3 +1,8 @@
+## 1.6.0 (2026-01-29)
+
+* Merge branch 'main' of github.com:Mariion-62/my-portfolio ([07dcebb](https://github.com/Mariion-62/my-portfolio/commit/07dcebb))
+* feat: enhance job experience description in CardParcours component ([4abb41c](https://github.com/Mariion-62/my-portfolio/commit/4abb41c))
+
 ## 1.5.0 (2026-01-21)
 
 * fix: update copyright year in Footer tests to use current year dynamically ([421570e](https://github.com/Mariion-62/my-portfolio/commit/421570e))
